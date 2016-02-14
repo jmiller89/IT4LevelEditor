@@ -25,7 +25,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 390;
+    public static final int MAX_TILE_INDEX = 391;
 
     public SpriteLoader()
     {
@@ -1263,6 +1263,8 @@ public class SpriteLoader
         else if (id == 388){return "Sprites/wateredgetoprightjunction.png";}
         else if (id == 389){return "Sprites/wateredgebottomleftjunction.png";}
         else if (id == 390){return "Sprites/wateredgebottomrightjunction.png";}
+
+        else if (id == 391){return "Sprites/bathroom.png";}
 
         return "Sprites/Tile0.gif";
 

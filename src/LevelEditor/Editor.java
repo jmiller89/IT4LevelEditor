@@ -66,7 +66,7 @@ public class Editor
         "*truck00", "*truck10", "*truck20", "*truck01", "*truck11", "*truck21", "*truck02", "truck12", "*truck22", "*FireExtinguisher", "RoadCornerLeft2", "RoadCornerRight2",
         "*painting2", "*painting3", "*painting4", "*painting5", "*airventclosed",
         "wateredgetop", "wateredgebottom", "wateredgeleft", "wateredgeright", "wateredgetopleft", "wateredgetopright", "wateredgebottomleft", "wateredgebottomright",
-        "wateredgetopleftjunction", "wateredgetoprightjunction", "wateredgebottomleftjunction", "wateredgebottomrightjunction"};
+        "wateredgetopleftjunction", "wateredgetoprightjunction", "wateredgebottomleftjunction", "wateredgebottomrightjunction", "bathroom"};
 
         floorTiles = new String[] {"Tile0", "Water", "Sand", "IndoorFloorTile", "WoodFloor",
         "Grass", "Snow", "IndoorFloorTile2", "IndoorFloorTile3", "IndoorFloorTile4", "Water2",
@@ -96,7 +96,7 @@ public class Editor
                                 252, 253, 254, 255, 256, 257, 258, 259, 260, 270,
                                 186, 187, 299, 300, 308, 309,
                                 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 369, 370, 371, 372, 373, 374, 377,
-                                379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390};
+                                379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391};
 
         System.out.println("Num tiles: " + tileIndices.length);
 
