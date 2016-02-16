@@ -111,7 +111,7 @@ public class EditorFrame extends javax.swing.JFrame
 
     private void showVersionInfo()
     {
-        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4 Level Editor\nProgrammed by Jim Miller\n\nSoftware version 1.3.22", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4 Level Editor\nProgrammed by Jim Miller\n\nSoftware version 1.4.23", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void newMap()
@@ -130,7 +130,7 @@ public class EditorFrame extends javax.swing.JFrame
         {
             File file = fc.getSelectedFile();
 
-            if ((file.getName().toLowerCase().endsWith(".it2")) || (file.getName().toLowerCase().endsWith(".it3")) || (file.getName().toLowerCase().endsWith(".it4")))
+            if (file.getName().toLowerCase().endsWith(".it4"))
             {
                 System.out.println(file.getName());
                 System.out.println(file.getPath());
@@ -153,7 +153,7 @@ public class EditorFrame extends javax.swing.JFrame
         {
             File file = fc.getSelectedFile();
 
-            if ((file.getName().toLowerCase().endsWith(".it2")) || (file.getName().toLowerCase().endsWith(".it3")) || (file.getName().toLowerCase().endsWith(".it4")))
+            if (file.getName().toLowerCase().endsWith(".it4"))
             {
                 System.out.println(file.getName());
                 System.out.println(file.getPath());

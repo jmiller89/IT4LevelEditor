@@ -45,33 +45,33 @@ public class Editor
 
         images = new String[] {"Tile0", "Water", "sand", "TallGrass", "*gate", "*tree", "*bricks", "*HorizontalPipes",
         "*VerticalPipes", "*Concrete2", "*RockWall", "*SimpleConcrete",
-        "*DryWall", "IndoorFloorTile", "WoodFloor", "VerticalRoadCenter", "HorizontalRoadCenter",
+        "*DryWall", "IndoorFloorTile", "woodfloor", "VerticalRoadCenter", "HorizontalRoadCenter",
         "HorizontalRoadSideLeft", "HorizontalRoadSideRight", "VerticalRoadSideLeft", "VerticalRoadSideRight", "RoadSideLowerLeftCorner",
         "RoadSideLowerRightCorner", "RoadSideUpperLeftCorner", "RoadSideUpperRightCorner", "grass", "Snow",
-        "IndoorFloorTile2", "IndoorFloorTile3", "IndoorFloorTile4", "water2", "grass2",
+        "fancyfloor2", "IndoorFloorTile3", "whitetiles", "water2", "grass2",
         "LadderUp", "LadderDown", "desert", "CobbleStone", "*SnowTreeTop",
         "*SnowTreeBottom", "*PalmTreeTop", "*PalmTreeBottom", "*streetlight_left_top", "*streetlight_left_bottom",
         "*streetlight_right_top", "*streetlight_right_bottom", "*Crate", "*DarkSolid", "*SubTopLeft",
         "*SubTopRight", "*computer", "*NoseCone", "*MissileSegment", "*LeftFin",
-        "*MiddleFin", "*RightFin", "FancyFloor", "IndoorFloorTile5", "IndoorFloorTile6",
+        "*MiddleFin", "*RightFin", "fancyfloor", "IndoorFloorTile5", "IndoorFloorTile6",
         "*bed1", "*bed2", "chair", "*desk", "*desk2",
-        "*computer_slacker", "*computer_slacker2", "*conferencedeskbottom", "*conferencedesktop", "binaryfloor", "*binarywall",
+        "*computer_slacker", "*computer_slacker2", "*conferencedeskbottom", "*conferencedesktop", "fancycarpet", "*hpainting",
         "*painting", "*fancywall", "*locker", "*computer2", "*crate2",
         "*tombstone", "*StoveTop", "*ChemLab", "*GlassWall", "*bookcase",
         "*GrassWall", "*tank00", "*tank10", "*tank20", "*tank01",
         "*tank11", "*tank21", "*tank02", "*tank12", "*tank22",
         "*tankbarrel", "HorizontalStairs", "VerticalStairs", "Female Ally", "Alien",
-        "*templewall", "*alienwall", "water3", "crimescene", "woodfloor2", "templefloor", "surrogate1", "surrogate2", "surrogate3", "female_ally_prisoner_front",
+        "*stonewall", "*stonewall2", "water3", "crimescene", "woodfloor2", "fancycarpet2", "surrogate1", "surrogate2", "surrogate3", "female_ally_prisoner_front",
         "*cactus", "*garagedoor", "*metalboxtop1", "*metalboxbottom1", "RoadCornerLeft", "RoadCornerRight",
         "*truck00", "*truck10", "*truck20", "*truck01", "*truck11", "*truck21", "*truck02", "truck12", "*truck22", "*FireExtinguisher", "RoadCornerLeft2", "RoadCornerRight2",
         "*painting2", "*painting3", "*painting4", "*painting5", "*airventclosed",
         "wateredgetop", "wateredgebottom", "wateredgeleft", "wateredgeright", "wateredgetopleft", "wateredgetopright", "wateredgebottomleft", "wateredgebottomright",
         "wateredgetopleftjunction", "wateredgetoprightjunction", "wateredgebottomleftjunction", "wateredgebottomrightjunction", "bathroom"};
 
-        floorTiles = new String[] {"Tile0", "Water", "Sand", "IndoorFloorTile", "WoodFloor",
-        "Grass", "Snow", "IndoorFloorTile2", "IndoorFloorTile3", "IndoorFloorTile4", "Water2",
-        "Grass2", "Desert", "CobbleStone", "FancyFloor", "IndoorFloorTile5", "IndoorFloorTile6",
-        "binaryfloor", "HorizontalStairs", "VerticalStairs", "water3", "woodfloor2", "templefloor"};
+        floorTiles = new String[] {"Tile0", "Water", "Sand", "IndoorFloorTile", "woodfloor",
+        "Grass", "Snow", "fancyfloor2", "IndoorFloorTile3", "whitetiles", "Water2",
+        "Grass2", "Desert", "CobbleStone", "fancyfloor", "IndoorFloorTile5", "IndoorFloorTile6",
+        "fancycarpet", "HorizontalStairs", "VerticalStairs", "water3", "woodfloor2", "fancycarpet2"};
 
         ftIndices = new int[] {0, 43, 44, 55, 56, 78, 79, 80, 81, 82, 83, 84, 97, 98, 118, 143, 144, 154, 220, 221, 254, 256, 257};
 
