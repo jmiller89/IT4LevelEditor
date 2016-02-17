@@ -7,7 +7,6 @@ package LevelEditor;
  * @author Jim (Admin)
  */
 
-//import java.util.ArrayList;
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsEnvironment;
 import java.awt.Image;
@@ -16,20 +15,16 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 import javax.imageio.ImageIO;
-//import javax.imageio.spi.IIORegistry;
-//import javax.imageio.spi.ImageReaderSpi;
 
 public class SpriteLoader
 {
-    //private ArrayList<Sprite> sprites;
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 391;
+    public static final int MAX_TILE_INDEX = 395;
 
     public SpriteLoader()
     {
-        //sprites = new ArrayList<Sprite>();
         sprites = new Sprite[MAX_TILE_INDEX + 1];
     }
 
@@ -38,14 +33,6 @@ public class SpriteLoader
 
         if (id >= 0)
         {
-//            for(int i = 0; i < sprites.size(); i++)
-//            {
-//                if (sprites.get(i).getID() == id)
-//                {
-//                    return sprites.get(i);
-//                }
-//            }
-
             if (sprites[id] != null)
             {
                 return sprites[id];
@@ -53,20 +40,10 @@ public class SpriteLoader
 
             String ref = getRef(id);
 
-
             BufferedImage source = null;
 
             try
-            {
-                // The ClassLoader.getResource() ensures we get the sprite
-
-                // from the appropriate place, this helps with deploying the game
-
-                // with things like webstart. You could equally do a file look
-
-                // up here.
-
-                
+            {                
                 URL url = this.getClass().getClassLoader().getResource(ref);
 
                 if (url == null)
@@ -74,12 +51,7 @@ public class SpriteLoader
                     System.out.println("Bad filename : ref = " + ref);
                 }
 
-                // use ImageIO to read the image in
-
                 source = ImageIO.read(url);
-                //source = ImageIO.read(getClass().getClassLoader().getResourceAsStream(ref));
-
-
             }
             catch (IOException e)
             {
@@ -92,11 +64,9 @@ public class SpriteLoader
             image.getGraphics().drawImage(source,0,0,null);
 
             Sprite newSprite = new Sprite(image, id);
-            //sprites.add(newSprite);
             sprites[id] = newSprite;
 
             return newSprite;
-
         }
 
         return null;
@@ -1265,6 +1235,11 @@ public class SpriteLoader
         else if (id == 390){return "Sprites/wateredgebottomrightjunction.png";}
 
         else if (id == 391){return "Sprites/bathroom.png";}
+
+        else if (id == 392){return "Sprites/treetop.png";}
+        else if (id == 393){return "Sprites/treebottom.png";}
+        else if (id == 394){return "Sprites/darktreetop.png";}
+        else if (id == 395){return "Sprites/darktreebottom.png";}
 
         return "Sprites/Tile0.gif";
 
