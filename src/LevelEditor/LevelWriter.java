@@ -140,9 +140,9 @@ public class LevelWriter
                     out.write("gas");
                     suffix = true;
                 }
-                if (editor.currLevel.getLevelMap(i).haze)
+                if (editor.currLevel.getLevelMap(i).midnight)
                 {
-                    out.write("haze");
+                    out.write("midnight");
                     suffix = true;
                 }
 

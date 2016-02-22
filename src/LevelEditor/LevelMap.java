@@ -34,7 +34,7 @@ public class LevelMap
     public boolean dark = false;
     public boolean semidark = false;
     public boolean gas = false;
-    public boolean haze = false;
+    public boolean midnight = false;
     public boolean jam = false;
     public boolean rain = false;
     public boolean snow = false;
@@ -213,35 +213,35 @@ public class LevelMap
             gas = true;
             dark = false;
             semidark = false;
-            haze = false;
+            midnight = false;
         }
         else if (weather.startsWith("dark"))
         {
             gas = false;
             dark = true;
             semidark = false;
-            haze = false;
+            midnight = false;
         }
         else if (weather.startsWith("semidark"))
         {
             gas = false;
             dark = false;
             semidark = true;
-            haze = false;
+            midnight = false;
         }
-        else if (weather.startsWith("haze"))
+        else if ((weather.startsWith("haze")) || (weather.startsWith("midnight")))
         {
             gas = false;
             dark = false;
             semidark = false;
-            haze = true;
+            midnight = true;
         }
         else if (weather.startsWith("jam"))
         {
             gas = false;
             dark = false;
             semidark = false;
-            haze = false;
+            midnight = false;
             jam = true;
         }
         else
@@ -249,7 +249,7 @@ public class LevelMap
             gas = false;
             dark = false;
             semidark = false;
-            haze = false;
+            midnight = false;
             jam = false;
         }
 

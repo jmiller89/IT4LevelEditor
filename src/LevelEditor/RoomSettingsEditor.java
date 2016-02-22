@@ -57,7 +57,7 @@ public class RoomSettingsEditor extends javax.swing.JPanel
         this.add(l2);
         l2.setBounds(0, 60, 150, 30);
 
-        String[] wconds = {"none", "gas", "dark", "semidark", "haze", "jam", "gas_jam", "dark_jam", "semidark_jam", "haze_jam"};
+        String[] wconds = {"none", "gas", "dark", "semidark", "midnight", "jam", "gas_jam", "dark_jam", "semidark_jam", "midnight_jam"};
         weather = new JComboBox(wconds);
         this.add(weather);
         weather.setBounds(150, 60, 150, 30);
@@ -129,7 +129,7 @@ public class RoomSettingsEditor extends javax.swing.JPanel
             {
                 weather.setSelectedIndex(8);
             }
-            if (editor.currRoom.haze)
+            if (editor.currRoom.midnight)
             {
                 weather.setSelectedIndex(9);
             }
@@ -148,7 +148,7 @@ public class RoomSettingsEditor extends javax.swing.JPanel
             {
                 weather.setSelectedIndex(3);
             }
-            if (editor.currRoom.haze)
+            if (editor.currRoom.midnight)
             {
                 weather.setSelectedIndex(4);
             }

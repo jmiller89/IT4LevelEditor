@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 395;
+    public static final int MAX_TILE_INDEX = 404;
 
     public SpriteLoader()
     {
@@ -30,9 +30,13 @@ public class SpriteLoader
 
     public Sprite getSprite(int id)
     {
-
         if (id >= 0)
         {
+            if (id > MAX_TILE_INDEX)
+            {
+                id = 0;
+            }
+            
             if (sprites[id] != null)
             {
                 return sprites[id];
@@ -913,7 +917,7 @@ public class SpriteLoader
         }
         else if (id == 209)
         {
-            return "Sprites/GrassWall.gif";
+            return "Sprites/GrassWall.png";
         }
         else if (id == 210)
         {
@@ -1240,6 +1244,16 @@ public class SpriteLoader
         else if (id == 393){return "Sprites/treebottom.png";}
         else if (id == 394){return "Sprites/darktreetop.png";}
         else if (id == 395){return "Sprites/darktreebottom.png";}
+
+        else if (id == 396){return "Sprites/cliff_face.png";}
+        else if (id == 397){return "Sprites/cliff_left.png";}
+        else if (id == 398){return "Sprites/cliff_right.png";}
+        else if (id == 399){return "Sprites/cliff_cornerleft.png";}
+        else if (id == 400){return "Sprites/cliff_cornerright.png";}
+        else if (id == 401){return "Sprites/cliff_cornerupperleft.png";}
+        else if (id == 402){return "Sprites/cliff_cornerupperright.png";}
+        else if (id == 403){return "Sprites/cliff_face.png";}
+        else if (id == 404){return "Sprites/GrassWallBottom.png";}
 
         return "Sprites/Tile0.gif";
 

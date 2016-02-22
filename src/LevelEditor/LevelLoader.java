@@ -95,7 +95,7 @@ public class LevelLoader
         boolean gas = false;
         boolean dark = false;
         boolean semidark = false;
-        boolean haze = false;
+        boolean midnight = false;
         boolean jam = false;
         boolean rain = false;
         boolean snow = false;
@@ -157,7 +157,7 @@ public class LevelLoader
                     gas = false;
                     dark = false;
                     semidark = false;
-                    haze = false;
+                    midnight = false;
                     jam = false;
                     rain = false;
                     snow = false;
@@ -186,7 +186,7 @@ public class LevelLoader
                     levmaps.get(currentLevelMap).dark = dark;
                     levmaps.get(currentLevelMap).semidark = semidark;
                     levmaps.get(currentLevelMap).gas = gas;
-                    levmaps.get(currentLevelMap).haze = haze;
+                    levmaps.get(currentLevelMap).midnight = midnight;
                     levmaps.get(currentLevelMap).jam = jam;
 
                     levmaps.get(currentLevelMap).rain = rain;
@@ -285,9 +285,9 @@ public class LevelLoader
                             {
                                 semidark = true;
                             }
-                            if (wline.startsWith("haze"))
+                            if ((wline.startsWith("haze")) || (wline.startsWith("midnight")))
                             {
-                                haze = true;
+                                midnight = true;
                             }
                             if (wline.indexOf("jam") >= 0)
                             {

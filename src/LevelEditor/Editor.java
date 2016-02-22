@@ -67,7 +67,9 @@ public class Editor
         "*painting2", "*painting3", "*painting4", "*painting5", "*airventclosed",
         "wateredgetop", "wateredgebottom", "wateredgeleft", "wateredgeright", "wateredgetopleft", "wateredgetopright", "wateredgebottomleft", "wateredgebottomright",
         "wateredgetopleftjunction", "wateredgetoprightjunction", "wateredgebottomleftjunction", "wateredgebottomrightjunction", "bathroom",
-        "*treetop", "*treebottom", "*darktreetop", "*darktreebottom"};
+        "*treetop", "*treebottom", "*darktreetop", "*darktreebottom",
+        "*cliff_face", "*cliff_left", "*cliff_right", "*cliff_cornerleft", "*cliff_cornerright", "*cliff_cornerupperleft", "*cliff_cornerupperright",
+        "*cliff_back", "*GrassWallBottom"};
 
         floorTiles = new String[] {"Tile0", "Water", "Sand", "IndoorFloorTile", "woodfloor",
         "Grass", "Snow", "fancyfloor2", "IndoorFloorTile3", "whitetiles", "Water2",
@@ -98,7 +100,7 @@ public class Editor
                                 186, 187, 299, 300, 308, 309,
                                 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 369, 370, 371, 372, 373, 374, 377,
                                 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391,
-                                392, 393, 394, 395};
+                                392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404};
 
         System.out.println("Num tiles: " + tileIndices.length);
 
