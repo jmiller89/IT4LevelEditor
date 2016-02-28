@@ -916,6 +916,16 @@ public class Editor
                 d = Direction.RIGHT;
             }
 
+            try
+            {
+                b = WaypointBehavior.valueOf(varStrings[3].toUpperCase());
+            }
+            catch(Exception e)
+            {
+                b = WaypointBehavior.STOP;
+            }
+
+            /*
             if (varStrings[3].equalsIgnoreCase(WaypointBehavior.CONTINUE.toString()))
             {
                 b = WaypointBehavior.CONTINUE;
@@ -940,7 +950,8 @@ public class Editor
             {
                 b = WaypointBehavior.FOLLOW_PLAYER;
             }
-
+            */
+            
             w.add(new Waypoint(x, y, d, b));            
         }
         
