@@ -69,7 +69,7 @@ public class DialogEditor extends javax.swing.JPanel
         editor.setDialog(dlgTA.getText());
     }
 
-    public void updateDialog(Dialogue d)
+    public void updateDialog(Dialog d)
     {
         contents = "";
         

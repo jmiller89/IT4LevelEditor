@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Boss extends NPC
 {
-    private LevelEditor.Dialogue pre;
-    private LevelEditor.Dialogue post;
+    private LevelEditor.Dialog pre;
+    private LevelEditor.Dialog post;
     public int speed = 15;
     public int shotInterval = 40;
     public String name = "Boss";
@@ -23,7 +23,7 @@ public class Boss extends NPC
     public Boss(int bossID, int x, int y, GuardType bossType,
                 int bossHealth, int bossDamage, int speed, int viewDistance, boolean bdyArmor)
     {
-        super(bossID, x, y, Direction.DOWN, bossHealth, NPCStatus.ALERT, false, bossDamage, null, bossType);
+        super((short)bossID, x, y, Direction.DOWN, bossHealth, NPCStatus.ALERT, false, bossDamage, null, bossType);
         this.BOSS = true;
         this.bodyArmor = bdyArmor;
         this.viewDistance = viewDistance;
@@ -49,48 +49,8 @@ public class Boss extends NPC
 
         int id = 119;
 
-        //TODO: Support more boss types
-
-        if (bossType == GuardType.BOSS1)
-        {
-            id = 119;
-        }
-        else if (bossType == GuardType.BOSS2)
-        {
-            id = 127;
-        }
-        else if (bossType == GuardType.BOSS3)
-        {
-            id = 135;
-        }
-        else if (bossType == GuardType.BOSS4)
-        {
-            id = 226;
-        }
-        else if (bossType == GuardType.BOSS5)
-        {
-            id = 234;
-        }
-        else if (bossType == GuardType.BOSS6)
-        {
-            id = 242;
-        }
-        else if (bossType == GuardType.CHIEF)
-        {
-            id = 334;
-        }
-        else if ((bossType == GuardType.SPECIAL) || (bossType == GuardType.SPECIAL_ENEMY))
-        {
-            id = 350;
-        }
-        else if (bossType == GuardType.ISLAND_GUY)
-        {
-            id = 342;
-        }
-        else if (bossType == GuardType.FEMALE_ALLY)
-        {
-            id = 261;
-        }
+        NPC dummy = NPC.create(bossType, 0, 0, Direction.DOWN, NPCStatus.DEAD, false, null);
+        id = dummy.getID();
 
         this.setID(id);
     }
@@ -104,7 +64,7 @@ public class Boss extends NPC
 
         if (this.getPreDialog() != null)
         {
-            b.setPreDialog(new Dialogue());
+            b.setPreDialog(new Dialog());
             ArrayList<String> contents = this.getPreDialog().getContents();
             for(String s : contents)
             {
@@ -114,7 +74,7 @@ public class Boss extends NPC
 
         if (this.getPostDialog() != null)
         {
-            b.setPostDialog(new Dialogue());
+            b.setPostDialog(new Dialog());
             ArrayList<String> contents = this.getPostDialog().getContents();
             for(String s : contents)
             {
@@ -125,22 +85,22 @@ public class Boss extends NPC
         return b;
     }
 
-    public void setPreDialog(Dialogue d)
+    public void setPreDialog(Dialog d)
     {
         pre = d;
     }
 
-    public void setPostDialog(Dialogue d)
+    public void setPostDialog(Dialog d)
     {
         post = d;
     }
 
-    public Dialogue getPreDialog()
+    public Dialog getPreDialog()
     {
         return pre;
     }
 
-    public Dialogue getPostDialog()
+    public Dialog getPostDialog()
     {
         return post;
     }

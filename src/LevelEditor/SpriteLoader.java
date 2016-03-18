@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 404;
+    public static final int MAX_TILE_INDEX = 444;
 
     public SpriteLoader()
     {
@@ -1017,67 +1017,67 @@ public class SpriteLoader
         }
         else if (id == 234)
         {
-           return "Sprites/Boss5Back.gif";
+           return "Sprites/nhBack.gif";
         }
         else if (id == 235)
         {
-           return "Sprites/Boss5Front.gif";
+           return "Sprites/nhFront.gif";
         }
         else if (id == 236)
         {
-           return "Sprites/Boss5Left.gif";
+           return "Sprites/nhLeft.gif";
         }
         else if (id == 237)
         {
-           return "Sprites/Boss5Right.gif";
+           return "Sprites/nhRight.gif";
         }
         else if (id == 238)
         {
-           return "Sprites/Boss5BackRun.gif";
+           return "Sprites/nhBackRun.gif";
         }
         else if (id == 239)
         {
-           return "Sprites/Boss5FrontRun.gif";
+           return "Sprites/nhFrontRun.gif";
         }
         else if (id == 240)
         {
-           return "Sprites/Boss5LeftRun.gif";
+           return "Sprites/nhLeftRun.gif";
         }
         else if (id == 241)
         {
-           return "Sprites/Boss5RightRun.gif";
+           return "Sprites/nhRightRun.gif";
         }
         else if (id == 242)
         {
-           return "Sprites/Boss6Back.gif";
+           return "Sprites/Boss0Back.gif";
         }
         else if (id == 243)
         {
-           return "Sprites/Boss6Front.gif";
+           return "Sprites/Boss0Front.gif";
         }
         else if (id == 244)
         {
-           return "Sprites/Boss6Left.gif";
+           return "Sprites/Boss0Left.gif";
         }
         else if (id == 245)
         {
-           return "Sprites/Boss6Right.gif";
+           return "Sprites/Boss0Right.gif";
         }
         else if (id == 246)
         {
-           return "Sprites/Boss6BackRun.gif";
+           return "Sprites/Boss0BackRun.gif";
         }
         else if (id == 247)
         {
-           return "Sprites/Boss6FrontRun.gif";
+           return "Sprites/Boss0FrontRun.gif";
         }
         else if (id == 248)
         {
-           return "Sprites/Boss6LeftRun.gif";
+           return "Sprites/Boss0LeftRun.gif";
         }
         else if (id == 249)
         {
-           return "Sprites/Boss6RightRun.gif";
+           return "Sprites/Boss0RightRun.gif";
         }
         else if (id == 250)
         {
@@ -1104,30 +1104,33 @@ public class SpriteLoader
         else if (id == 266){return "Sprites/female_ally_front_run.gif";}
         else if (id == 267){return "Sprites/female_ally_left_run.gif";}
         else if (id == 268){return "Sprites/female_ally_right_run.gif";}
-        else if (id == 269){return "Sprites/female_ally_prisoner_back.gif";}
-        else if (id == 270){return "Sprites/female_ally_prisoner_front.gif";}
-        else if (id == 271){return "Sprites/female_ally_prisoner_left.gif";}
-        else if (id == 272){return "Sprites/female_ally_prisoner_right.gif";}
-        else if (id == 273){return "Sprites/female_ally_prisoner_back_run.gif";}
-        else if (id == 274){return "Sprites/female_ally_prisoner_front_run.gif";}
-        else if (id == 275){return "Sprites/female_ally_prisoner_left_run.gif";}
-        else if (id == 276){return "Sprites/female_ally_prisoner_right_run.gif";}
-        else if (id == 277){return "Sprites/WormUp.gif";}
-        else if (id == 278){return "Sprites/WormDown.gif";}
-        else if (id == 279){return "Sprites/WormLeft.gif";}
-        else if (id == 280){return "Sprites/WormRight.gif";}
-        else if (id == 281){return "Sprites/WormUp2.gif";}
-        else if (id == 282){return "Sprites/WormDown2.gif";}
-        else if (id == 283){return "Sprites/WormLeft2.gif";}
-        else if (id == 284){return "Sprites/WormRight2.gif";}
-        else if (id == 285){return "Sprites/LarveUp.gif";}
-        else if (id == 286){return "Sprites/LarveDown.gif";}
-        else if (id == 287){return "Sprites/LarveLeft.gif";}
-        else if (id == 288){return "Sprites/LarveRight.gif";}
-        else if (id == 289){return "Sprites/LarveUp2.gif";}
-        else if (id == 290){return "Sprites/LarveDown2.gif";}
-        else if (id == 291){return "Sprites/LarveLeft2.gif";}
-        else if (id == 292){return "Sprites/LarveRight2.gif";}
+        else if (id == 269){return "Sprites/female_ally_back_workout.gif";}
+        else if (id == 270){return "Sprites/female_ally_front_workout.gif";}
+        else if (id == 271){return "Sprites/female_ally_left_workout.gif";}
+        else if (id == 272){return "Sprites/female_ally_right_workout.gif";}
+        else if (id == 273){return "Sprites/female_ally_back_run_workout.gif";}
+        else if (id == 274){return "Sprites/female_ally_front_run_workout.gif";}
+        else if (id == 275){return "Sprites/female_ally_left_run_workout.gif";}
+        else if (id == 276){return "Sprites/female_ally_right_run_workout.gif";}
+
+        else if (id == 277){return "Sprites/Mutant1Back.gif";}
+        else if (id == 278){return "Sprites/Mutant1Front.gif";}
+        else if (id == 279){return "Sprites/Mutant1Left.gif";}
+        else if (id == 280){return "Sprites/Mutant1Right.gif";}
+        else if (id == 281){return "Sprites/Mutant1BackRun.gif";}
+        else if (id == 282){return "Sprites/Mutant1FrontRun.gif";}
+        else if (id == 283){return "Sprites/Mutant1LeftRun.gif";}
+        else if (id == 284){return "Sprites/Mutant1RightRun.gif";}
+
+        else if (id == 285){return "Sprites/Mutant2Back.gif";}
+        else if (id == 286){return "Sprites/Mutant2Front.gif";}
+        else if (id == 287){return "Sprites/Mutant2Left.gif";}
+        else if (id == 288){return "Sprites/Mutant2Right.gif";}
+        else if (id == 289){return "Sprites/Mutant2BackRun.gif";}
+        else if (id == 290){return "Sprites/Mutant2FrontRun.gif";}
+        else if (id == 291){return "Sprites/Mutant2LeftRun.gif";}
+        else if (id == 292){return "Sprites/Mutant2RightRun.gif";}
+
         else if (id == 293){return "Sprites/mine.gif";}
         else if (id == 294){return "Sprites/laser_horizontal.gif";}
         else if (id == 295){return "Sprites/laser_vertical.gif";}
@@ -1180,14 +1183,14 @@ public class SpriteLoader
         else if (id == 340){return "Sprites/chief_left_run.gif";}
         else if (id == 341){return "Sprites/chief_right_run.gif";}
 
-        else if (id == 342){return "Sprites/ig_back.gif";}
-        else if (id == 343){return "Sprites/ig_front.gif";}
-        else if (id == 344){return "Sprites/ig_left.gif";}
-        else if (id == 345){return "Sprites/ig_right.gif";}
-        else if (id == 346){return "Sprites/ig_back_run.gif";}
-        else if (id == 347){return "Sprites/ig_front_run.gif";}
-        else if (id == 348){return "Sprites/ig_left_run.gif";}
-        else if (id == 349){return "Sprites/ig_right_run.gif";}
+        else if (id == 342){return "Sprites/un_guy_back.gif";}
+        else if (id == 343){return "Sprites/un_guy_front.gif";}
+        else if (id == 344){return "Sprites/un_guy_left.gif";}
+        else if (id == 345){return "Sprites/un_guy_right.gif";}
+        else if (id == 346){return "Sprites/un_guy_back_run.gif";}
+        else if (id == 347){return "Sprites/un_guy_front_run.gif";}
+        else if (id == 348){return "Sprites/un_guy_left_run.gif";}
+        else if (id == 349){return "Sprites/un_guy_right_run.gif";}
 
         else if (id == 350){return "Sprites/SpecialGuardBack.gif";}
         else if (id == 351){return "Sprites/SpecialGuardFront.gif";}
@@ -1254,6 +1257,51 @@ public class SpriteLoader
         else if (id == 402){return "Sprites/cliff_cornerupperright.png";}
         else if (id == 403){return "Sprites/cliff_face.png";}
         else if (id == 404){return "Sprites/GrassWallBottom.png";}
+
+        else if (id == 405){return "Sprites/oldman_back.gif";}
+        else if (id == 406){return "Sprites/oldman_front.gif";}
+        else if (id == 407){return "Sprites/oldman_left.gif";}
+        else if (id == 408){return "Sprites/oldman_right.gif";}
+        else if (id == 409){return "Sprites/oldman_back_run.gif";}
+        else if (id == 410){return "Sprites/oldman_front_run.gif";}
+        else if (id == 411){return "Sprites/oldman_left_run.gif";}
+        else if (id == 412){return "Sprites/oldman_right_run.gif";}
+
+        else if (id == 413){return "Sprites/crippleBack.gif";}
+        else if (id == 414){return "Sprites/crippleFront.gif";}
+        else if (id == 415){return "Sprites/crippleLeft.gif";}
+        else if (id == 416){return "Sprites/crippleRight.gif";}
+        else if (id == 417){return "Sprites/crippleBackRun.gif";}
+        else if (id == 418){return "Sprites/crippleFrontRun.gif";}
+        else if (id == 419){return "Sprites/crippleLeftRun.gif";}
+        else if (id == 420){return "Sprites/crippleRightRun.gif";}
+
+        else if (id == 421){return "Sprites/scientist_female_back.gif";}
+        else if (id == 422){return "Sprites/scientist_female_front.gif";}
+        else if (id == 423){return "Sprites/scientist_female_left.gif";}
+        else if (id == 424){return "Sprites/scientist_female_right.gif";}
+        else if (id == 425){return "Sprites/scientist_female_back_run.gif";}
+        else if (id == 426){return "Sprites/scientist_female_front_run.gif";}
+        else if (id == 427){return "Sprites/scientist_female_left_run.gif";}
+        else if (id == 428){return "Sprites/scientist_female_right_run.gif";}
+
+        else if (id == 429){return "Sprites/EvaBack.gif";}
+        else if (id == 430){return "Sprites/EvaFront.gif";}
+        else if (id == 431){return "Sprites/EvaLeft.gif";}
+        else if (id == 432){return "Sprites/EvaRight.gif";}
+        else if (id == 433){return "Sprites/EvaBackRun.gif";}
+        else if (id == 434){return "Sprites/EvaFrontRun.gif";}
+        else if (id == 435){return "Sprites/EvaLeftRun.gif";}
+        else if (id == 436){return "Sprites/EvaRightRun.gif";}
+
+        else if (id == 437){return "Sprites/man_back.gif";}
+        else if (id == 438){return "Sprites/man_front.gif";}
+        else if (id == 439){return "Sprites/man_left.gif";}
+        else if (id == 440){return "Sprites/man_right.gif";}
+        else if (id == 441){return "Sprites/man_back_run.gif";}
+        else if (id == 442){return "Sprites/man_front_run.gif";}
+        else if (id == 443){return "Sprites/man_left_run.gif";}
+        else if (id == 444){return "Sprites/man_right_run.gif";}
 
         return "Sprites/Tile0.gif";
 

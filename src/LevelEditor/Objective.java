@@ -11,7 +11,7 @@ package LevelEditor;
 public class Objective extends ITObject
 {
     public String name;
-    public Dialogue dialog;
+    public Dialog dialog;
     public int mapIndex;
     private String title = "OBJECTIVE";
     public boolean remove = false;
@@ -21,7 +21,7 @@ public class Objective extends ITObject
         super(id, x * 40, y * 40);
         name = objName;
         mapIndex = map_Index;
-        dialog = new Dialogue();
+        dialog = new Dialog();
 
         //This prevents non-item objectives from being displayed as such
         if ((x < 0) || (y < 0))
@@ -35,7 +35,7 @@ public class Objective extends ITObject
         super(o.getID(), o.getX(), o.getY());
         name = o.name;
         mapIndex = o.mapIndex;
-        dialog = new Dialogue(o.dialog);
+        dialog = new Dialog(o.dialog);
         title = o.title;
     }
 

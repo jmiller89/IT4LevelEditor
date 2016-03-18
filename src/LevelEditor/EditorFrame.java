@@ -111,7 +111,7 @@ public class EditorFrame extends javax.swing.JFrame
 
     private void showVersionInfo()
     {
-        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4 Level Editor\nProgrammed by Jim Miller\n\nSoftware version 1.4.23", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4 Level Editor\nProgrammed by Jim Miller\n\nSoftware version 1.5.24", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void newMap()

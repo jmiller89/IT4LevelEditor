@@ -45,4 +45,5 @@ public class SelectedPayload
     public String precip = "none";
     public boolean forceprone = false;
     public int rank = 1;
+    public boolean friendly = false;
 }

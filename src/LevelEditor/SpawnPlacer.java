@@ -145,42 +145,18 @@ public class SpawnPlacer extends javax.swing.JPanel
 
     private void updateType()
     {
-        if (type.getSelectedItem().toString().equals(GuardType.LIGHT.toString()))
+        GuardType gtp = GuardType.LIGHT;
+
+        try
         {
-            editor.selectedPayload.gt = GuardType.LIGHT;
+            gtp = GuardType.valueOf(type.getSelectedItem().toString());
         }
-        if (type.getSelectedItem().toString().equals(GuardType.MEDIUM.toString()))
+        catch(Exception e)
         {
-            editor.selectedPayload.gt = GuardType.MEDIUM;
+            gtp = GuardType.LIGHT;
         }
-        if (type.getSelectedItem().toString().equals(GuardType.HEAVY.toString()))
-        {
-            editor.selectedPayload.gt = GuardType.HEAVY;
-        }
-        if (type.getSelectedItem().toString().equals(GuardType.SCIENTIST1.toString()))
-        {
-            editor.selectedPayload.gt = GuardType.SCIENTIST1;
-        }
-        if (type.getSelectedItem().toString().equals(GuardType.SCIENTIST2.toString()))
-        {
-            editor.selectedPayload.gt = GuardType.SCIENTIST2;
-        }
-        if (type.getSelectedItem().toString().equals(GuardType.WORM.toString()))
-        {
-            editor.selectedPayload.gt = GuardType.WORM;
-        }
-        if (type.getSelectedItem().toString().equals(GuardType.LARVA.toString()))
-        {
-            editor.selectedPayload.gt = GuardType.LARVA;
-        }
-        if (type.getSelectedItem().toString().equals(GuardType.ALIEN.toString()))
-        {
-            editor.selectedPayload.gt = GuardType.ALIEN;
-        }
-        if (type.getSelectedItem().toString().equals(GuardType.SPECIAL_ENEMY.toString()))
-        {
-            editor.selectedPayload.gt = GuardType.SPECIAL_ENEMY;
-        }
+
+        editor.selectedPayload.gt = gtp;
     }
 
     private void updateArmored()

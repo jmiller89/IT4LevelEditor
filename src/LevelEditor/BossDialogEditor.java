@@ -85,7 +85,7 @@ public class BossDialogEditor extends javax.swing.JPanel
         bossPlacer.hideDialogEditor();
     }
 
-    public void updateDialog(Dialogue d)
+    public void updateDialog(Dialog d)
     {
         contents = "";
 

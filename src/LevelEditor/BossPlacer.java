@@ -60,7 +60,7 @@ public class BossPlacer extends javax.swing.JPanel
 
         ArrayList<String> guardTypes = new ArrayList<String>();
 
-        GuardType[] exclude = {GuardType.LIGHT, GuardType.MEDIUM, GuardType.HEAVY, GuardType.SCIENTIST1, GuardType.SCIENTIST2, GuardType.FEMALE_ALLY_PRISONER, GuardType.WORM, GuardType.LARVA, GuardType.ALIEN, GuardType.WOMAN1, GuardType.WOMAN2, GuardType.WOMAN3};
+        GuardType[] exclude = {};
         for(GuardType gt : GuardType.values())
         {
             boolean validType = true;

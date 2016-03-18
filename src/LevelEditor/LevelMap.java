@@ -29,7 +29,7 @@ public class LevelMap
     private boolean alertMode = false;
     private Boss boss = null;
 
-    private Dialogue dlg;
+    private Dialog dlg;
 
     public boolean dark = false;
     public boolean semidark = false;
@@ -84,7 +84,7 @@ public class LevelMap
         initializeWaterAndTallGrass();
 
         setSpriteTiles();
-        dlg = new Dialogue();
+        dlg = new Dialog();
     }
 
     public LevelMap(LevelMap l)
@@ -167,7 +167,7 @@ public class LevelMap
             boss = (Boss) l.boss.copy();
         }
 
-        dlg = new Dialogue(l.dlg);
+        dlg = new Dialog(l.dlg);
 
         initializeCollidableObjects();
         initializeWaterAndTallGrass();
@@ -856,12 +856,12 @@ public class LevelMap
         return tallGrass;
     }
 
-    public void setDialogue(Dialogue d)
+    public void setDialogue(Dialog d)
     {
         dlg = d;
     }
 
-    public Dialogue getDialogue()
+    public Dialog getDialogue()
     {
         return dlg;
     }

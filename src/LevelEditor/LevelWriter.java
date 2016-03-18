@@ -251,6 +251,12 @@ public class LevelWriter
                     {
                         out.write("_ARMORED");
                     }
+
+                    if (npc.isFriendly())
+                    {
+                        out.write(" FRIEND");
+                    }
+
                     out.newLine();
 
                     out.write("[path]");
@@ -403,8 +409,8 @@ public class LevelWriter
                     out.newLine();
 
                     Boss b = editor.currLevel.getLevelMap(i).getBoss();
-                    Dialogue pre = b.getPreDialog();
-                    Dialogue post = b.getPostDialog();
+                    Dialog pre = b.getPreDialog();
+                    Dialog post = b.getPostDialog();
 
                     out.write(b.getType().toString() + " " + b.getTileX() + " " + b.getTileY() + " " + b.getMaxHealth() + " " + b.getWeaponDamage() + " " + b.speed + " " + b.viewDistance + " " + b.bodyArmor);
                     out.newLine();

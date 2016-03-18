@@ -33,6 +33,7 @@ public class NPCPlacer extends javax.swing.JPanel
     private JComboBox type;
     private JTextArea pathTA;
     private JCheckBox bodyArmor;
+    private JCheckBox friendly;
     private JButton save;
     public NPC npc = null;
 
@@ -48,7 +49,7 @@ public class NPCPlacer extends javax.swing.JPanel
         nlbl.setBounds(0, 0, 100, 50);
 
         ArrayList<String> guardTypes = new ArrayList<String>();
-        GuardType[] exclude = {GuardType.BOSS1, GuardType.BOSS2, GuardType.BOSS3, GuardType.BOSS4, GuardType.BOSS5, GuardType.BOSS6};
+        GuardType[] exclude = {};
         for(GuardType gt : GuardType.values())
         {
             boolean validType = true;
@@ -69,11 +70,11 @@ public class NPCPlacer extends javax.swing.JPanel
         type = new JComboBox(guardTypes.toArray());
 
         this.add(type);
-        type.setBounds(60, 50, 100, 50);
+        type.setBounds(35, 40, 180, 30);
 
         JLabel tlbl = new JLabel("Type: ");
         this.add(tlbl);
-        tlbl.setBounds(0, 50, 50, 50);
+        tlbl.setBounds(0, 40, 50, 30);
 
         JLabel plbl = new JLabel("Path and Behavior: ");
         this.add(plbl);
@@ -91,7 +92,11 @@ public class NPCPlacer extends javax.swing.JPanel
 
         bodyArmor = new JCheckBox("Body Armor");
         this.add(bodyArmor);
-        bodyArmor.setBounds(170, 50, 100, 50);
+        bodyArmor.setBounds(230, 40, 100, 30);
+
+        friendly = new JCheckBox("Friendly");
+        this.add(friendly);
+        friendly.setBounds(30, 80, 100, 30);
 
         save = new JButton("Save Changes");
         this.add(save);
@@ -116,6 +121,14 @@ public class NPCPlacer extends javax.swing.JPanel
             public void actionPerformed(ActionEvent e)
             {
                 bArmor();
+            }
+        });
+
+        friendly.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                toggleFriendly();
             }
         });
 
@@ -160,6 +173,11 @@ public class NPCPlacer extends javax.swing.JPanel
         editor.selectedPayload.bodyArmor = this.bodyArmor.isSelected();
     }
 
+    private void toggleFriendly()
+    {
+        editor.selectedPayload.friendly = this.friendly.isSelected();
+    }
+
     private void changeType()
     {
         GuardType gtype = GuardType.LIGHT;
@@ -195,6 +213,7 @@ public class NPCPlacer extends javax.swing.JPanel
         if (npc != null)
         {
             bodyArmor.setSelected(npc.bodyArmor);
+            friendly.setSelected(npc.isFriendly());
             type.setSelectedItem(npc.getType().toString());
             pathTA.setText(npc.getPath().toString());
         }
@@ -205,6 +224,9 @@ public class NPCPlacer extends javax.swing.JPanel
     {
         pathTA.setText("");
         bodyArmor.setSelected(false);
+        friendly.setSelected(false);
+        editor.selectedPayload.bodyArmor = false;
+        editor.selectedPayload.friendly = false;
         type.setSelectedIndex(0);
         npc = null;
         editor.selectedPayload.path = "";

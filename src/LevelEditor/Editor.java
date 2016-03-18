@@ -318,7 +318,7 @@ public class Editor
             }
             else if (selectedPayload.mode == Mode.NPC)
             {
-                currRoom.addNPC(makeNPC(selectedPayload.x, selectedPayload.y, selectedPayload.gt, selectedPayload.path));
+                currRoom.addNPC(makeNPC(selectedPayload.x, selectedPayload.y, selectedPayload.gt, selectedPayload.path, selectedPayload.friendly));
             }
             else if (selectedPayload.mode == Mode.BOSS)
             {
@@ -605,7 +605,7 @@ public class Editor
     public void updateNPC(NPC npc)
     {
         currRoom.removeNPC(npc.getPath().getStartingWaypoint().getXPos(), npc.getPath().getStartingWaypoint().getYPos());
-        NPC newNPC = makeNPC(selectedPayload.x, selectedPayload.y, selectedPayload.gt, selectedPayload.path);
+        NPC newNPC = makeNPC(selectedPayload.x, selectedPayload.y, selectedPayload.gt, selectedPayload.path, selectedPayload.friendly);
 
         if (newNPC != null)
         {
@@ -773,7 +773,7 @@ public class Editor
         ef.editCamera(null);
     }
 
-    private NPC makeNPC(int x, int y, GuardType gt, String path)
+    private NPC makeNPC(int x, int y, GuardType gt, String path, boolean friendly)
     {
         NPC myNPC = null;
 
@@ -784,74 +784,7 @@ public class Editor
 
         Path p = makePath(path);
 
-        if (gt == GuardType.LIGHT)
-        {
-            myNPC = new LightGuard(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.MEDIUM)
-        {
-            myNPC = new MediumGuard(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.HEAVY)
-        {
-            myNPC = new HeavyGuard(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.SCIENTIST1)
-        {
-            myNPC = new Scientist1(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.SCIENTIST2)
-        {
-            myNPC = new Scientist2(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.FEMALE_ALLY)
-        {
-            myNPC = new FemaleAlly(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.FEMALE_ALLY_PRISONER)
-        {
-            myNPC = new FemaleAllyPrisoner(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.WORM)
-        {
-            myNPC = new Worm(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.LARVA)
-        {
-            myNPC = new Larva(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.ALIEN)
-        {
-            myNPC = new Alien(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.WOMAN1)
-        {
-            myNPC = new Woman1(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.WOMAN2)
-        {
-            myNPC = new Woman2(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.WOMAN3)
-        {
-            myNPC = new Woman3(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.ISLAND_GUY)
-        {
-            myNPC = new IslandGuy(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.CHIEF)
-        {
-            myNPC = new Chief(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.SPECIAL)
-        {
-            myNPC = new SpecialGuard(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (gt == GuardType.SPECIAL_ENEMY)
-        {
-            myNPC = new SpecialGuardEnemy(x, y, Direction.DOWN, NPCStatus.PATROL, p);
-        }        
+        myNPC = NPC.create(gt, x, y, Direction.DOWN, NPCStatus.PATROL, friendly, p);
 
         if (myNPC != null)
         {
@@ -962,7 +895,7 @@ public class Editor
 
     public void setDialog(String dlg)
     {
-        Dialogue d = new Dialogue();
+        Dialog d = new Dialog();
 
         String[] dStrings = dlg.split("\\n");
 
@@ -974,9 +907,9 @@ public class Editor
         currRoom.setDialogue(d);
     }
 
-    private Dialogue makeDialog(String dlg)
+    private Dialog makeDialog(String dlg)
     {
-        Dialogue d = new Dialogue();
+        Dialog d = new Dialog();
 
         if (dlg.length() > 0)
         {

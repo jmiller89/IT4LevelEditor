@@ -88,7 +88,7 @@ public class LevelLoader
         ArrayList<Door> doors = new ArrayList<Door>();
         ArrayList<SecurityCamera> cameras = new ArrayList<SecurityCamera>();
         ArrayList<Spawn> spawns = new ArrayList<Spawn>();
-        Dialogue dialog = new Dialogue();
+        Dialog dialog = new Dialog();
         Boss boss = null;
         Path playerPath = null;
 
@@ -150,7 +150,7 @@ public class LevelLoader
                     doors = new ArrayList<Door>();
                     cameras = new ArrayList<SecurityCamera>();
                     spawns = new ArrayList<Spawn>();
-                    dialog = new Dialogue();
+                    dialog = new Dialog();
                     boss = null;
                     playerPath = null;
                     alertStage = false;
@@ -467,8 +467,8 @@ public class LevelLoader
                     line = scanner.nextLine();
                     boss = parseBoss(line);
 
-                    Dialogue pre = new Dialogue();
-                    Dialogue post = new Dialogue();
+                    Dialog pre = new Dialog();
+                    Dialog post = new Dialog();
 
                     line = scanner.nextLine();
                     boss.name = line;
@@ -624,7 +624,7 @@ public class LevelLoader
                         line = scanner.nextLine();
                         line = scanner.nextLine();
 
-                        Dialogue d = new Dialogue();
+                        Dialog d = new Dialog();
 
                         while (!line.startsWith(this.DLG_END))
                         {
@@ -959,157 +959,38 @@ public class LevelLoader
         NPC npc = null;
         GuardType NPCType = GuardType.LIGHT;
 
-        if (n.startsWith(GuardType.LIGHT.toString()))
+        boolean friendly = false;
+        boolean armored = false;
+        String[] splits = n.split(" ");
+        if (splits.length > 1)
+        {
+            if (splits[1].startsWith("FRIEND"))
+            {
+                friendly = true;
+            }
+        }
+
+        String[] ntsplits = splits[0].split("_ARMORED");
+        if (ntsplits.length > 1)
+        {
+            armored = true;
+        }
+
+        String npcTypeString = ntsplits[0];
+
+        try
+        {
+            NPCType = GuardType.valueOf(npcTypeString);
+        }
+        catch(Exception e)
         {
             NPCType = GuardType.LIGHT;
-        }
-        if (n.startsWith(GuardType.MEDIUM.toString()))
-        {
-            NPCType = GuardType.MEDIUM;
-        }
-        if (n.startsWith(GuardType.HEAVY.toString()))
-        {
-            NPCType = GuardType.HEAVY;
-        }
-        if (n.startsWith(GuardType.SCIENTIST1.toString()))
-        {
-            NPCType = GuardType.SCIENTIST1;
-        }
-        if (n.startsWith(GuardType.SCIENTIST2.toString()))
-        {
-            NPCType = GuardType.SCIENTIST2;
-        }
-
-        //New to IT2 v2.05
-        if (n.startsWith(GuardType.FEMALE_ALLY_PRISONER.toString()))
-        {
-            NPCType = GuardType.FEMALE_ALLY_PRISONER;
-        }
-        else if (n.startsWith(GuardType.FEMALE_ALLY.toString()))
-        {
-            NPCType = GuardType.FEMALE_ALLY;
-        }
-
-        if (n.startsWith(GuardType.WORM.toString()))
-        {
-            NPCType = GuardType.WORM;
-        }
-        if (n.startsWith(GuardType.LARVA.toString()))
-        {
-            NPCType = GuardType.LARVA;
-        }
-        if (n.startsWith(GuardType.ALIEN.toString()))
-        {
-            NPCType = GuardType.ALIEN;
-        }
-        
-        //New to IT3
-        if (n.startsWith(GuardType.WOMAN1.toString()))
-        {
-            NPCType = GuardType.WOMAN1;
-        }
-        if (n.startsWith(GuardType.WOMAN2.toString()))
-        {
-            NPCType = GuardType.WOMAN2;
-        }
-        if (n.startsWith(GuardType.WOMAN3.toString()))
-        {
-            NPCType = GuardType.WOMAN3;
-        }
-        if (n.startsWith(GuardType.ISLAND_GUY.toString()))
-        {
-            NPCType = GuardType.ISLAND_GUY;
-        }
-        if (n.startsWith(GuardType.CHIEF.toString()))
-        {
-            NPCType = GuardType.CHIEF;
-        }
-        if (n.startsWith(GuardType.SPECIAL_ENEMY.toString()))
-        {
-            NPCType = GuardType.SPECIAL_ENEMY;
-        }
-        else if (n.startsWith(GuardType.SPECIAL.toString()))
-        {
-            NPCType = GuardType.SPECIAL;
         }
 
         Path p = parsePath(s);
 
-        if (NPCType == GuardType.LIGHT)
-        {
-            npc = new LightGuard(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.MEDIUM)
-        {
-            npc = new MediumGuard(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.HEAVY)
-        {
-            npc = new HeavyGuard(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.SCIENTIST1)
-        {
-            npc = new Scientist1(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.SCIENTIST2)
-        {
-            npc = new Scientist2(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.FEMALE_ALLY)
-        {
-            npc = new FemaleAlly(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.FEMALE_ALLY_PRISONER)
-        {
-            npc = new FemaleAllyPrisoner(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.WORM)
-        {
-            npc = new Worm(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.LARVA)
-        {
-            npc = new Larva(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.ALIEN)
-        {
-            npc = new Alien(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-
-        //New to IT3
-        if (NPCType == GuardType.WOMAN1)
-        {
-            npc = new Woman1(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.WOMAN2)
-        {
-            npc = new Woman2(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.WOMAN3)
-        {
-            npc = new Woman3(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.ISLAND_GUY)
-        {
-            npc = new IslandGuy(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.CHIEF)
-        {
-            npc = new Chief(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.SPECIAL)
-        {
-            npc = new SpecialGuard(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-        if (NPCType == GuardType.SPECIAL_ENEMY)
-        {
-            npc = new SpecialGuardEnemy(0, 0, Direction.DOWN, NPCStatus.PATROL, p);
-        }
-
-        if (n.endsWith(ARMORED))
-        {
-            npc.bodyArmor = true;
-        }
+        npc = NPC.create(NPCType, 0, 0, Direction.DOWN, NPCStatus.PATROL, friendly, p);
+        npc.bodyArmor = armored;
 
         return npc;
     }
@@ -1259,46 +1140,22 @@ public class LevelLoader
         String gts = s2.substring(0, index);
         String ns = s2.substring(index+1);
 
-        if (gts.startsWith(GuardType.LIGHT.toString()))
-        {
-            gt = GuardType.LIGHT;
-        }
-        if (gts.startsWith(GuardType.MEDIUM.toString()))
-        {
-            gt = GuardType.MEDIUM;
-        }
-        if (gts.startsWith(GuardType.HEAVY.toString()))
-        {
-            gt = GuardType.HEAVY;
-        }
-        if (gts.startsWith(GuardType.SCIENTIST1.toString()))
-        {
-            gt = GuardType.SCIENTIST1;
-        }
-        if (gts.startsWith(GuardType.SCIENTIST2.toString()))
-        {
-            gt = GuardType.SCIENTIST2;
-        }
-        if (gts.startsWith(GuardType.WORM.toString()))
-        {
-            gt = GuardType.WORM;
-        }
-        if (gts.startsWith(GuardType.LARVA.toString()))
-        {
-            gt = GuardType.LARVA;
-        }
-        if (gts.startsWith(GuardType.ALIEN.toString()))
-        {
-            gt = GuardType.ALIEN;
-        }
-        if (gts.startsWith(GuardType.SPECIAL_ENEMY.toString()))
-        {
-            gt = GuardType.SPECIAL_ENEMY;
-        }
 
-        if (gts.endsWith(ARMORED))
+        String[] gtssplits = gts.split("_ARMORED");
+        if (gtssplits.length > 1)
         {
             armored = true;
+        }
+
+        String gtsString = gtssplits[0];
+
+        try
+        {
+            gt = GuardType.valueOf(gtsString);
+        }
+        catch(Exception e)
+        {
+            gt = GuardType.LIGHT;
         }
 
         num = Integer.parseInt(ns);
@@ -1308,18 +1165,18 @@ public class LevelLoader
 
     private Boss parseBoss(String s)
     {
-        int id = 119;
+        short id = 119;
         int x = 1;
         int y = 1;
-        GuardType gt = GuardType.BOSS1;
+        GuardType gt = GuardType.BOSS0;
         int health = 80;
         int damage = 15;
-        int speed = 15;
+        byte speed = 15;
         int viewDist = 320;
         boolean bodyArmor = false;
 
         System.out.println(s);
-        
+
         int index = s.indexOf(" ");
         String bt = s.substring(0, index);
         String s1 = s.substring(index + 1);
@@ -1343,63 +1200,24 @@ public class LevelLoader
         String vs = s6.substring(0, index);
         String bs = s6.substring(index + 1);
 
-        if (bt.equalsIgnoreCase(GuardType.BOSS1.toString()))
+        try
         {
-            gt = GuardType.BOSS1;
-            id = 119;
+            gt = GuardType.valueOf(bt);
         }
-        if (bt.equalsIgnoreCase(GuardType.BOSS2.toString()))
+        catch(Exception e)
         {
-            gt = GuardType.BOSS2;
-            id = 127;
-        }
-        if (bt.equalsIgnoreCase(GuardType.BOSS3.toString()))
-        {
-            gt = GuardType.BOSS3;
-            id = 135;
-        }
-        if (bt.equalsIgnoreCase(GuardType.BOSS4.toString()))
-        {
-            gt = GuardType.BOSS4;
-            id = 226;
-        }
-        if (bt.equalsIgnoreCase(GuardType.BOSS5.toString()))
-        {
-            gt = GuardType.BOSS5;
-            id = 234;
-        }
-        if (bt.equalsIgnoreCase(GuardType.BOSS6.toString()))
-        {
-            gt = GuardType.BOSS6;
-            id = 242;
-        }
-        if (bt.equalsIgnoreCase(GuardType.CHIEF.toString()))
-        {
-            gt = GuardType.CHIEF;
-            id = 334;
-        }
-        if (bt.equalsIgnoreCase(GuardType.SPECIAL.toString()) || (bt.equalsIgnoreCase(GuardType.SPECIAL_ENEMY.toString())))
-        {
-            gt = GuardType.SPECIAL;
-            id = 350;
-        }
-        if (bt.equalsIgnoreCase(GuardType.ISLAND_GUY.toString()))
-        {
-            gt = GuardType.ISLAND_GUY;
-            id = 342;
-        }
-        if (bt.equalsIgnoreCase(GuardType.FEMALE_ALLY.toString()))
-        {
-            gt = GuardType.FEMALE_ALLY;
-            id = 261;
+            gt = GuardType.BOSS0;
         }
 
+        //I was too lazy to map the guardTypes to ids, so we make a dummy NPC and extract the id out of it
+        NPC dummy = NPC.create(gt, 0, 0, Direction.UP, NPCStatus.DEAD, false, null);
+        id = (short)dummy.getID();
 
         x = Integer.parseInt(xs);
         y = Integer.parseInt(ys);
         health = Integer.parseInt(hs);
         damage = Integer.parseInt(ds);
-        speed = Integer.parseInt(ss);
+        speed = (byte)Integer.parseInt(ss);
         viewDist = Integer.parseInt(vs);
         bodyArmor = Boolean.parseBoolean(bs);
 
