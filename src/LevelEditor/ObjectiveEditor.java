@@ -73,6 +73,7 @@ public class ObjectiveEditor extends javax.swing.JPanel
         dialog = new JTextArea("");
         dialog.setAutoscrolls(true);
         dialog.setEditable(true);
+        dialog.setLineWrap(true);
 
         JScrollPane jsp = new JScrollPane(dialog);
         jsp.setBounds(0, 150, 370, 100);

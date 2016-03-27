@@ -45,6 +45,7 @@ public class DialogEditor extends javax.swing.JPanel
         dlgTA = new JTextArea("");
         dlgTA.setAutoscrolls(true);
         dlgTA.setEditable(true);
+        dlgTA.setLineWrap(true);
 
         JScrollPane jsp = new JScrollPane(dlgTA);
         jsp.setBounds(0, 50, 350, 200);

@@ -219,7 +219,7 @@ public class PanResizePanel extends javax.swing.JPanel
 
     private void panRight()
     {
-        if ((mPanel.originX + 1) < (mPanel.getMaxViewX() - 19))
+        if ((mPanel.originX + 1) < (mPanel.getMaxViewX() - 14))
         {
             mPanel.originX++;
         }

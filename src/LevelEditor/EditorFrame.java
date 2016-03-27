@@ -105,13 +105,13 @@ public class EditorFrame extends javax.swing.JFrame
             }
         });
 
-        this.setSize(1200, 900);
+        this.setSize(1000, 900);
         this.setVisible(true);
     }
 
     private void showVersionInfo()
     {
-        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4 Level Editor\nProgrammed by Jim Miller\n\nSoftware version 1.5.24", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4: The Endling's Artifice Level Editor\nProgrammed by jmiller89\n\nSoftware version 1.5.25", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void newMap()
@@ -179,7 +179,7 @@ public class EditorFrame extends javax.swing.JFrame
         mPanel.setAutoscrolls(true);
         
         this.add(mPanel);
-        mPanel.setBounds(0, 0, 800, 600);
+        mPanel.setBounds(0, 0, 600, 600);
         
     }
 
@@ -187,7 +187,7 @@ public class EditorFrame extends javax.swing.JFrame
     {
         ePanel = new EditorPanel(editor, mPanel);
         this.add(ePanel);
-        ePanel.setBounds(801, 0, 400, 600);
+        ePanel.setBounds(601, 0, 400, 600);
     }
 
     public void addDGCPanel()

@@ -156,13 +156,13 @@ public class MapPanel extends javax.swing.JPanel implements MouseListener, Mouse
 
     private int getMaxX(int x, int max)
     {
-        if ((x + 20) > max)
+        if ((x + 15) > max)
         {
             return max;
         }
         else
         {
-            return (x + 20);
+            return (x + 15);
         }
     }
 
@@ -309,18 +309,18 @@ public class MapPanel extends javax.swing.JPanel implements MouseListener, Mouse
     private void initComponents() {
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        setMaximumSize(new java.awt.Dimension(600, 600));
+        setPreferredSize(new java.awt.Dimension(600, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -417,7 +417,7 @@ public class MapPanel extends javax.swing.JPanel implements MouseListener, Mouse
 
     private void panRight()
     {
-        if ((originX + 1) < (getMaxViewX() - 19))
+        if ((originX + 1) < (getMaxViewX() - 14))
         {
             originX++;
             mouseX++;
