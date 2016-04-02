@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 444;
+    public static final int MAX_TILE_INDEX = 458;
 
     public SpriteLoader()
     {
@@ -1302,6 +1302,21 @@ public class SpriteLoader
         else if (id == 442){return "Sprites/man_front_run.gif";}
         else if (id == 443){return "Sprites/man_left_run.gif";}
         else if (id == 444){return "Sprites/man_right_run.gif";}
+
+        else if (id == 445){return "Sprites/stairs_left_down.png";}
+        else if (id == 446){return "Sprites/stairs_right_up.png";}
+        else if (id == 447){return "Sprites/stairs_right_down.png";}
+        else if (id == 448){return "Sprites/stairs_left_up.png";}
+        else if (id == 449){return "Sprites/m1911a1.png";}
+        else if (id == 450){return "Sprites/usp.png";}
+        else if (id == 451){return "Sprites/tec9.png";}
+        else if (id == 452){return "Sprites/p90.png";}
+        else if (id == 453){return "Sprites/m16.png";}
+        else if (id == 454){return "Sprites/fara83.png";}
+        else if (id == 455){return "Sprites/m4.png";}
+        else if (id == 456){return "Sprites/sa08.png";}
+        else if (id == 457){return "Sprites/spas12.png";}
+        else if (id == 458){return "Sprites/saiga12.png";}
 
         return "Sprites/Tile0.gif";
 
