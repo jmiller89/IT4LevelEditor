@@ -161,11 +161,11 @@ public class Editor
     {
         currLevel = new Level(1, 0, this);
 
-        int[][] tileMap = new int[15][20];
+        int[][] tileMap = new int[15][15];
 
         for(int j = 0; j < 15; j++)
         {
-            for(int i = 0; i < 20; i++)
+            for(int i = 0; i < 15; i++)
             {
                 tileMap[j][i] = 0;
             }
@@ -186,11 +186,11 @@ public class Editor
     {
         currLevel = new Level(1, 0, this);
 
-        int[][] tileMap = new int[15][20];
+        int[][] tileMap = new int[15][15];
 
         for(int j = 0; j < 15; j++)
         {
-            for(int i = 0; i < 20; i++)
+            for(int i = 0; i < 15; i++)
             {
                 tileMap[j][i] = 0;
             }
@@ -207,11 +207,11 @@ public class Editor
             currLevel.addLevelMap(new LevelMap(currRoom));
         }
         
-        int[][] tileMap = new int[15][20];
+        int[][] tileMap = new int[15][15];
 
         for(int j = 0; j < 15; j++)
         {
-            for(int i = 0; i < 20; i++)
+            for(int i = 0; i < 15; i++)
             {
                 tileMap[j][i] = 0;
             }
@@ -237,11 +237,11 @@ public class Editor
         
         if (currLevel.getNumRooms() == 0)
         {
-            int[][] tileMap = new int[15][20];
+            int[][] tileMap = new int[15][15];
 
             for(int j = 0; j < 15; j++)
             {
-                for(int i = 0; i < 20; i++)
+                for(int i = 0; i < 15; i++)
                 {
                     tileMap[j][i] = 0;
                 }
