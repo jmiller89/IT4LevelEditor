@@ -18,6 +18,7 @@ package LevelEditor;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -48,8 +49,27 @@ public class SpawnPlacer extends javax.swing.JPanel
         this.add(l1);
         l1.setBounds(0, 0, 100, 50);
 
-        String[] guardTypes = {"LIGHT", "MEDIUM", "HEAVY", "SCIENTIST1", "SCIENTIST2", "WORM", "LARVA", "ALIEN", "SPECIAL_ENEMY"};
-        type = new JComboBox(guardTypes);
+        ArrayList<String> guardTypes = new ArrayList<String>();
+        GuardType[] exclude = {};
+        for(GuardType gt : GuardType.values())
+        {
+            boolean validType = true;
+            for(GuardType ex: exclude)
+            {
+                if (gt == ex)
+                {
+                    validType = false;
+                    break;
+                }
+            }
+
+            if (validType)
+            {
+                guardTypes.add(gt.toString());
+            }
+        }
+
+        type = new JComboBox(guardTypes.toArray());
 
         this.add(type);
         type.setBounds(60, 50, 100, 50);
