@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 458;
+    public static final int MAX_TILE_INDEX = 474;
 
     public SpriteLoader()
     {
@@ -1317,6 +1317,24 @@ public class SpriteLoader
         else if (id == 456){return "Sprites/sa08.png";}
         else if (id == 457){return "Sprites/spas12.png";}
         else if (id == 458){return "Sprites/saiga12.png";}
+
+        else if (id == 459){return "Sprites/JuggernautBack.gif";}
+        else if (id == 460){return "Sprites/JuggernautFront.gif";}
+        else if (id == 461){return "Sprites/JuggernautLeft.gif";}
+        else if (id == 462){return "Sprites/JuggernautRight.gif";}
+        else if (id == 463){return "Sprites/JuggernautBackRun.gif";}
+        else if (id == 464){return "Sprites/JuggernautFrontRun.gif";}
+        else if (id == 465){return "Sprites/JuggernautLeftRun.gif";}
+        else if (id == 466){return "Sprites/JuggernautRightRun.gif";}
+
+        else if (id == 467){return "Sprites/Juggernaut2Back.gif";}
+        else if (id == 468){return "Sprites/Juggernaut2Front.gif";}
+        else if (id == 469){return "Sprites/Juggernaut2Left.gif";}
+        else if (id == 470){return "Sprites/Juggernaut2Right.gif";}
+        else if (id == 471){return "Sprites/Juggernaut2BackRun.gif";}
+        else if (id == 472){return "Sprites/Juggernaut2FrontRun.gif";}
+        else if (id == 473){return "Sprites/Juggernaut2LeftRun.gif";}
+        else if (id == 474){return "Sprites/Juggernaut2RightRun.gif";}
 
         return "Sprites/Tile0.gif";
 

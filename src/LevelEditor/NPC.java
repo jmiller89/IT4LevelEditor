@@ -189,6 +189,16 @@ public class NPC extends ITCharacter
                 currHealth = 15;
                 weaponDmg = 20;
                 break;
+            case JUGGERNAUT:
+                id = 459;
+                currHealth = 300;
+                weaponDmg = 20;
+                break;
+            case JUGGERNAUT2:
+                id = 467;
+                currHealth = 600;
+                weaponDmg = 25;
+                break;
             default:
                 id = 19;
                 currHealth = 22;
