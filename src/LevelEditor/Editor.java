@@ -30,11 +30,9 @@ public class Editor
     private int[] objectiveIndices;
     private int[][] copyBuffer = null;
 
-    private static final String pr = "";
-    public static final String[] songs = {pr + "lets_go.mid", pr + "trailblazer.mid", pr + "in_the_cave.mid", pr + "incoming_signals.mid",
-    pr + "proud_warriors.mid", pr + "retro_electro.mid", pr + "rock_force.mid", pr + "squadron_standby.mid", pr + "streetlight_fences.mid",
-    pr + "the_chaos_warrior.mid", pr + "the_enchanted_orchard.mid", pr + "the_great_river_race.mid", pr + "the_heroes_return.mid", pr + "the_late_one.mid",
-    pr + "the_sinister_maze_.mid", pr + "zombie_chase.mid", pr + "communication.mid"};
+    public static final String[] songs = {"DarkForest.wav", "Warfare.wav", "BrokenFragment.wav",
+    "RetroSteel.wav", "IAmYourProduct.wav", "AndTheSunReappeared.wav", "FourBraveChampions.wav",
+    "BuildingUp.wav", "TightSpot.wav"};
 
     public Editor()
     {

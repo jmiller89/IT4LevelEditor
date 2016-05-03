@@ -164,7 +164,14 @@ public class RoomSettingsEditor extends javax.swing.JPanel
             precip.setSelectedIndex(2);
         }
 
-        songSelect.setSelectedIndex(editor.currRoom.songIndex);
+        if (editor.currRoom.songIndex < editor.songs.length)
+        {
+            songSelect.setSelectedIndex(editor.currRoom.songIndex);
+        }
+        else
+        {
+            songSelect.setSelectedIndex(0);
+        }
 
         
     }
