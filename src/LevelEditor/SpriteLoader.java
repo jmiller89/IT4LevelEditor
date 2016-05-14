@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 474;
+    public static final int MAX_TILE_INDEX = 482;
 
     public SpriteLoader()
     {
@@ -473,7 +473,7 @@ public class SpriteLoader
         }
         else if (id == 98)
         {
-            return "Sprites/CobbleStone.gif";
+            return "Sprites/duct.png";
         }
         else if (id == 99)
         {
@@ -1335,6 +1335,15 @@ public class SpriteLoader
         else if (id == 472){return "Sprites/Juggernaut2FrontRun.gif";}
         else if (id == 473){return "Sprites/Juggernaut2LeftRun.gif";}
         else if (id == 474){return "Sprites/Juggernaut2RightRun.gif";}
+
+        else if (id == 475){return "Sprites/female_ally_back_swim.gif";}
+        else if (id == 476){return "Sprites/female_ally_front_swim.gif";}
+        else if (id == 477){return "Sprites/female_ally_left_swim.gif";}
+        else if (id == 478){return "Sprites/female_ally_right_swim.gif";}
+        else if (id == 479){return "Sprites/female_ally_back_run_swim.gif";}
+        else if (id == 480){return "Sprites/female_ally_front_run_swim.gif";}
+        else if (id == 481){return "Sprites/female_ally_left_run_swim.gif";}
+        else if (id == 482){return "Sprites/female_ally_right_run_swim.gif";}
 
         return "Sprites/Tile0.gif";
 

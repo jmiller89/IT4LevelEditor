@@ -32,7 +32,7 @@ public class Editor
 
     public static final String[] songs = {"DarkForest.wav", "Warfare.wav", "BrokenFragment.wav",
     "RetroSteel.wav", "IAmYourProduct.wav", "AndTheSunReappeared.wav", "FourBraveChampions.wav",
-    "BuildingUp.wav", "TightSpot.wav"};
+    "BuildingUp.wav", "TightSpot.wav", "Cavedrips.wav"};
 
     public Editor()
     {
@@ -47,7 +47,7 @@ public class Editor
         "HorizontalRoadSideLeft", "HorizontalRoadSideRight", "VerticalRoadSideLeft", "VerticalRoadSideRight", "RoadSideLowerLeftCorner",
         "RoadSideLowerRightCorner", "RoadSideUpperLeftCorner", "RoadSideUpperRightCorner", "grass", "Snow",
         "fancyfloor2", "IndoorFloorTile3", "whitetiles", "water2", "grass2",
-        "LadderUp", "LadderDown", "desert", "CobbleStone", "*SnowTreeTop",
+        "LadderUp", "LadderDown", "desert", "duct", "*SnowTreeTop",
         "*SnowTreeBottom", "*PalmTreeTop", "*PalmTreeBottom", "*streetlight_left_top", "*streetlight_left_bottom",
         "*streetlight_right_top", "*streetlight_right_bottom", "*Crate", "*DarkSolid", "*SubTopLeft",
         "*SubTopRight", "*computer", "*NoseCone", "*MissileSegment", "*LeftFin",
@@ -71,7 +71,7 @@ public class Editor
 
         floorTiles = new String[] {"Tile0", "Water", "Sand", "IndoorFloorTile", "woodfloor",
         "Grass", "Snow", "fancyfloor2", "IndoorFloorTile3", "whitetiles", "Water2",
-        "Grass2", "Desert", "CobbleStone", "fancyfloor", "IndoorFloorTile5", "IndoorFloorTile6",
+        "Grass2", "Desert", "duct", "fancyfloor", "IndoorFloorTile5", "IndoorFloorTile6",
         "fancycarpet", "HorizontalStairs", "VerticalStairs", "water3", "woodfloor2", "fancycarpet2"};
 
         ftIndices = new int[] {0, 43, 44, 55, 56, 78, 79, 80, 81, 82, 83, 84, 97, 98, 118, 143, 144, 154, 220, 221, 254, 256, 257};
