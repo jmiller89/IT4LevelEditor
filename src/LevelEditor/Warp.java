@@ -8,12 +8,12 @@ package LevelEditor;
  */
 public class Warp extends ITObject
 {
-    private int levX;
+    public int levX;
     //private int levY;
-    private int playerX;
-    private int playerY;
-    private boolean nextLevelWarp;
-    private int securityLevelRequired;
+    public int playerX;
+    public int playerY;
+    public boolean nextLevelWarp;
+    public int securityLevelRequired;
     public boolean isPlayerInWarp = false;
     
     public Warp(int id, int locX, int locY, int lX, int pX, int pY, boolean nextLvWarp, int securityLevel)

@@ -413,6 +413,12 @@ public class LevelWriter
                     Dialog post = b.getPostDialog();
 
                     out.write(b.getType().toString() + " " + b.getTileX() + " " + b.getTileY() + " " + b.getMaxHealth() + " " + b.getWeaponDamage() + " " + b.speed + " " + b.viewDistance + " " + b.bodyArmor);
+
+                    if (b.event != null)
+                    {
+                        out.write(" " + b.event.playerX + " " + b.event.playerY + " " + b.event.levX + " " + b.event.nextLevelWarp);
+                    }
+
                     out.newLine();
                     out.write(b.name);
                     out.newLine();

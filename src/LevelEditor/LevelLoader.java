@@ -1177,6 +1177,60 @@ public class LevelLoader
 
         System.out.println(s);
 
+        String[] splits = s.split(" ");
+
+        try
+        {
+            gt = GuardType.valueOf(splits[0]);
+        }
+        catch(Exception e)
+        {
+            gt = GuardType.BOSS0;
+        }
+
+        //I was too lazy to map the guardTypes to ids, so we make a dummy NPC and extract the id out of it
+        NPC dummy = NPC.create(gt, 0, 0, Direction.UP, NPCStatus.DEAD, false, null);
+        id = (short)(dummy.getID());
+
+        x = Integer.parseInt(splits[1]);
+        y = Integer.parseInt(splits[2]);
+        health = Integer.parseInt(splits[3]);
+        damage = Integer.parseInt(splits[4]);
+        speed = (byte)Integer.parseInt(splits[5]);
+        viewDist = Integer.parseInt(splits[6]);
+        bodyArmor = Boolean.parseBoolean(splits[7]);
+
+        Warp event = null;
+
+        if (splits.length >= 12)
+        {
+            //Parse event warp
+            int wx = Integer.parseInt(splits[8]);
+            int wy = Integer.parseInt(splits[9]);
+            int wi = Integer.parseInt(splits[10]);
+            boolean wn = Boolean.parseBoolean(splits[11]);
+
+            event = new Warp((short)0, 0, 0, wi, wx, wy, wn, 0);
+        }
+
+        return new Boss(id, (x * 40), (y * 40), gt, health, damage, speed, viewDist, bodyArmor, event);
+    }
+
+    /*
+    private Boss parseBoss(String s)
+    {
+        short id = 119;
+        int x = 1;
+        int y = 1;
+        GuardType gt = GuardType.BOSS0;
+        int health = 80;
+        int damage = 15;
+        byte speed = 15;
+        int viewDist = 320;
+        boolean bodyArmor = false;
+
+        System.out.println(s);
+
         int index = s.indexOf(" ");
         String bt = s.substring(0, index);
         String s1 = s.substring(index + 1);
@@ -1223,4 +1277,5 @@ public class LevelLoader
 
         return new Boss(id, (x * 40), (y * 40), gt, health, damage, speed, viewDist, bodyArmor);
     }
+    */
 }

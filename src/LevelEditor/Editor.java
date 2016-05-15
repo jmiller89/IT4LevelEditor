@@ -322,7 +322,7 @@ public class Editor
             else if (selectedPayload.mode == Mode.BOSS)
             {
                 //int bossID, int x, int y, GuardType bossType, int bossHealth, int bossDamage, int speed, int viewDistance, boolean bdyArmor
-                Boss boss = new Boss(selectedPayload.id, 40 * selectedPayload.x, 40 * selectedPayload.y, selectedPayload.gt, selectedPayload.health, selectedPayload.damage, selectedPayload.speed, selectedPayload.viewdistance, selectedPayload.bodyArmor);
+                Boss boss = new Boss(selectedPayload.id, 40 * selectedPayload.x, 40 * selectedPayload.y, selectedPayload.gt, selectedPayload.health, selectedPayload.damage, selectedPayload.speed, selectedPayload.viewdistance, selectedPayload.bodyArmor, null);
 
                 boss.name = selectedPayload.name;
 
@@ -619,7 +619,7 @@ public class Editor
 
     public void updateBoss()
     {
-        Boss boss = new Boss(selectedPayload.id, 40 * selectedPayload.x, 40 * selectedPayload.y, selectedPayload.gt, selectedPayload.health, selectedPayload.damage, selectedPayload.speed, selectedPayload.viewdistance, selectedPayload.bodyArmor);
+        Boss boss = new Boss(selectedPayload.id, 40 * selectedPayload.x, 40 * selectedPayload.y, selectedPayload.gt, selectedPayload.health, selectedPayload.damage, selectedPayload.speed, selectedPayload.viewdistance, selectedPayload.bodyArmor, currRoom.getBoss().event);
 
         boss.name = selectedPayload.name;
 
