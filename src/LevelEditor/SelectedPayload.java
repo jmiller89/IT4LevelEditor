@@ -46,4 +46,5 @@ public class SelectedPayload
     public boolean forceprone = false;
     public int rank = 1;
     public boolean friendly = false;
+    public SecurityCameraType cameraType = SecurityCameraType.NORMAL;
 }

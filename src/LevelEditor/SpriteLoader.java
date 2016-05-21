@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 482;
+    public static final int MAX_TILE_INDEX = 494;
 
     public SpriteLoader()
     {
@@ -1344,6 +1344,21 @@ public class SpriteLoader
         else if (id == 480){return "Sprites/female_ally_front_run_swim.gif";}
         else if (id == 481){return "Sprites/female_ally_left_run_swim.gif";}
         else if (id == 482){return "Sprites/female_ally_right_run_swim.gif";}
+
+        else if (id == 483){return "Sprites/GunCameraUp.png";}
+        else if (id == 484){return "Sprites/GunCameraDown.png";}
+        else if (id == 485){return "Sprites/GunCameraLeft.png";}
+        else if (id == 486){return "Sprites/GunCameraRight.png";}
+
+        else if (id == 487){return "Sprites/drone_up.png";}
+        else if (id == 488){return "Sprites/drone_down.png";}
+        else if (id == 489){return "Sprites/drone_left.png";}
+        else if (id == 490){return "Sprites/drone_right.png";}
+
+        else if (id == 491){return "Sprites/gun_drone_up.png";}
+        else if (id == 492){return "Sprites/gun_drone_down.png";}
+        else if (id == 493){return "Sprites/gun_drone_left.png";}
+        else if (id == 494){return "Sprites/gun_drone_right.png";}
 
         return "Sprites/Tile0.gif";
 

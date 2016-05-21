@@ -26,13 +26,16 @@ public class SecurityCamera extends ITObject
     private static final int WP_WAIT = 100;
     private int wait = 0;
 
-    public SecurityCamera(int id, int x, int y, Direction dir, Waypoint way1, Waypoint way2, boolean isFixed)
+    public SecurityCameraType type = SecurityCameraType.NORMAL;
+
+    public SecurityCamera(int id, int x, int y, Direction dir, Waypoint way1, Waypoint way2, boolean isFixed, SecurityCameraType camType)
     {
         super(id, x, y);
         direction = dir;
         start = way1;
         end = way2;
         fixed = isFixed;
+        type = camType;
 
         if (direction == Direction.UP)
         {
@@ -58,7 +61,7 @@ public class SecurityCamera extends ITObject
 
     public SecurityCamera copy()
     {
-        return new SecurityCamera(this.getID(), this.getX(), this.getY(), this.direction, this.start, this.end, this.fixed);
+        return new SecurityCamera(this.getID(), this.getX(), this.getY(), this.direction, this.start, this.end, this.fixed, this.type);
     }
 
     public Direction getDirection()

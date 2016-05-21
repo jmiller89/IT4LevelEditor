@@ -18,6 +18,7 @@ package LevelEditor;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -31,6 +32,7 @@ public class CameraEditor extends javax.swing.JPanel
 {
     private Editor editor;
     private JComboBox direction;
+    private JComboBox camType;
     private JTextField delta;
     private JCheckBox isStatic;
     private JButton save;
@@ -64,6 +66,21 @@ public class CameraEditor extends javax.swing.JPanel
         isStatic.setBounds(0, 160, 100, 50);
 
         isStatic.setSelected(true);
+
+        JLabel l2b = new JLabel("Camera Type:");
+        this.add(l2b);
+        l2b.setBounds(100,160,100,50);
+
+        ArrayList<String> camTypeStrs = new ArrayList<String>();
+        for(SecurityCameraType ct : SecurityCameraType.values())
+        {
+            camTypeStrs.add(ct.toString());
+        }
+
+        camType = new JComboBox(camTypeStrs.toArray());
+
+        camType.setBounds(200, 160, 150, 50);
+        this.add(camType);
 
         JLabel l3 = new JLabel("Delta");
         this.add(l3);
@@ -109,6 +126,14 @@ public class CameraEditor extends javax.swing.JPanel
                 updateDir();
             }
 
+        });
+
+        camType.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                updateCamType();
+            }
         });
 
         isStatic.addActionListener(new ActionListener()
@@ -175,6 +200,21 @@ public class CameraEditor extends javax.swing.JPanel
         }
     }
 
+    private void updateCamType()
+    {
+         String cts = (String)camType.getSelectedItem();
+
+         try
+         {
+            editor.selectedPayload.cameraType = SecurityCameraType.valueOf(cts);
+         }
+         catch(Exception e)
+         {
+             System.err.println(e);
+             editor.selectedPayload.cameraType = SecurityCameraType.NORMAL;
+         }
+    }
+
     private void updateDelta()
     {
         try
@@ -219,6 +259,7 @@ public class CameraEditor extends javax.swing.JPanel
         {
             direction.setSelectedItem(camera.getDirection().toString());
             isStatic.setSelected(camera.fixed);
+            camType.setSelectedItem(camera.type.toString());
 
             delta.setText(getDelta());
         }
@@ -227,6 +268,7 @@ public class CameraEditor extends javax.swing.JPanel
             direction.setSelectedIndex(0);
             delta.setText("0");
             isStatic.setSelected(true);
+            camType.setSelectedIndex(0);
         }
     }
 

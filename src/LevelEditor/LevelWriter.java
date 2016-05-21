@@ -371,6 +371,12 @@ public class LevelWriter
 
                     out.write(Boolean.toString(c.fixed));
                     out.newLine();
+
+                    if (c.type != SecurityCameraType.NORMAL)
+                    {
+                        out.write(c.type.toString());
+                        out.newLine();
+                    }
                     
                     out.write("[/camera]");
                     out.newLine();

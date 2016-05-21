@@ -394,12 +394,38 @@ public class Editor
                     dy = selectedPayload.delta;
                 }
 
+                if (selectedPayload.cameraType == SecurityCameraType.GUN)
+                {
+                    id = 483;
+                }
+                else if (selectedPayload.cameraType == SecurityCameraType.DRONE)
+                {
+                    id = 487;
+                }
+                else if (selectedPayload.cameraType == SecurityCameraType.GUN_DRONE)
+                {
+                    id = 491;
+                }
+
+                if (selectedPayload.dir == Direction.DOWN)
+                {
+                    id += 1;
+                }
+                else if (selectedPayload.dir == Direction.LEFT)
+                {
+                    id += 2;
+                }
+                else if (selectedPayload.dir == Direction.RIGHT)
+                {
+                    id += 3;
+                }
+
                 //int x, int y, Direction d, WaypointBehavior b
                 Waypoint start = new Waypoint(selectedPayload.x, selectedPayload.y, selectedPayload.dir, WaypointBehavior.CONTINUE);
                 Waypoint end = new Waypoint((selectedPayload.x + dx), (selectedPayload.y + dy), selectedPayload.dir, WaypointBehavior.CONTINUE);
 
                 //int id, int x, int y, Direction dir, Waypoint way1, Waypoint way2, boolean isFixed
-                currRoom.addCamera(new SecurityCamera(id, 40 * selectedPayload.x, 40 * selectedPayload.y, selectedPayload.dir, start, end, selectedPayload.isFixed));
+                currRoom.addCamera(new SecurityCamera(id, 40 * selectedPayload.x, 40 * selectedPayload.y, selectedPayload.dir, start, end, selectedPayload.isFixed, selectedPayload.cameraType));
             }
         }
         else if (selectedPayload.selectionMode == SelectionMode.DELETE)
@@ -736,13 +762,39 @@ public class Editor
                 id = 200;
                 dy = selectedPayload.delta;
             }
+            
+            if (selectedPayload.cameraType == SecurityCameraType.GUN)
+            {
+                id = 483;
+            }
+            else if (selectedPayload.cameraType == SecurityCameraType.DRONE)
+            {
+                id = 487;
+            }
+            else if (selectedPayload.cameraType == SecurityCameraType.GUN_DRONE)
+            {
+                id = 491;
+            }
+
+            if (selectedPayload.dir == Direction.DOWN)
+            {
+                id += 1;
+            }
+            else if (selectedPayload.dir == Direction.LEFT)
+            {
+                id += 2;
+            }
+            else if (selectedPayload.dir == Direction.RIGHT)
+            {
+                id += 3;
+            }
 
             Waypoint start = new Waypoint(selectedPayload.x, selectedPayload.y, selectedPayload.dir, WaypointBehavior.CONTINUE);
             Waypoint end = new Waypoint((selectedPayload.x + dx), (selectedPayload.y + dy), selectedPayload.dir, WaypointBehavior.CONTINUE);
 
             currRoom.removeCamera(x, y);
             //int id, int x, int y, Direction dir, Waypoint way1, Waypoint way2, boolean isFixed
-            SecurityCamera newCamera = new SecurityCamera(id, 40*x, 40*y, selectedPayload.dir, start, end, selectedPayload.isFixed);
+            SecurityCamera newCamera = new SecurityCamera(id, 40*x, 40*y, selectedPayload.dir, start, end, selectedPayload.isFixed, selectedPayload.cameraType);
             currRoom.addCamera(newCamera);
         }
     }

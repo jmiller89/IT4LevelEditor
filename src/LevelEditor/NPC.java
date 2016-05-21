@@ -204,6 +204,11 @@ public class NPC extends ITCharacter
                 currHealth = 600;
                 weaponDmg = 25;
                 break;
+            case PLAYER:
+                id = 1;
+                currHealth = 100;
+                weaponDmg = 25;
+                break;
             default:
                 id = 19;
                 currHealth = 22;
