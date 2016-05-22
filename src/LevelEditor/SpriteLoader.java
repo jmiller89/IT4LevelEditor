@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 494;
+    public static final int MAX_TILE_INDEX = 509;
 
     public SpriteLoader()
     {
@@ -1309,7 +1309,7 @@ public class SpriteLoader
         else if (id == 448){return "Sprites/stairs_left_up.png";}
         else if (id == 449){return "Sprites/m1911a1.png";}
         else if (id == 450){return "Sprites/usp.png";}
-        else if (id == 451){return "Sprites/tec9.png";}
+        else if (id == 451){return "Sprites/fmk3.png";}
         else if (id == 452){return "Sprites/p90.png";}
         else if (id == 453){return "Sprites/m16.png";}
         else if (id == 454){return "Sprites/fara83.png";}
@@ -1359,6 +1359,26 @@ public class SpriteLoader
         else if (id == 492){return "Sprites/gun_drone_down.png";}
         else if (id == 493){return "Sprites/gun_drone_left.png";}
         else if (id == 494){return "Sprites/gun_drone_right.png";}
+
+        else if (id == 495){return "Sprites/boat00.png";}
+        else if (id == 496){return "Sprites/boat10.png";}
+        else if (id == 497){return "Sprites/boat20.png";}
+
+        else if (id == 498){return "Sprites/boat01.png";}
+        else if (id == 499){return "Sprites/boat11.png";}
+        else if (id == 500){return "Sprites/boat21.png";}
+
+        else if (id == 501){return "Sprites/boat02.png";}
+        else if (id == 502){return "Sprites/boat12.png";}
+        else if (id == 503){return "Sprites/boat22.png";}
+
+        else if (id == 504){return "Sprites/boat03.png";}
+        else if (id == 505){return "Sprites/boat13.png";}
+        else if (id == 506){return "Sprites/boat23.png";}
+
+        else if (id == 507){return "Sprites/boat04.png";}
+        else if (id == 508){return "Sprites/boat14.png";}
+        else if (id == 509){return "Sprites/boat24.png";}
 
         return "Sprites/Tile0.gif";
 
