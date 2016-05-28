@@ -58,7 +58,7 @@ public class Editor
         "*tombstone", "*StoveTop", "*ChemLab", "*GlassWall", "*bookcase",
         "*GrassWall", "*tank00", "*tank10", "*tank20", "*tank01",
         "*tank11", "*tank21", "*tank02", "*tank12", "*tank22",
-        "*tankbarrel", "HorizontalStairs", "VerticalStairs", "Female Ally", "Alien",
+        "*tankbarrel", "HorizontalStairs", "VerticalStairs",
         "*stonewall", "*stonewall2", "water3", "crimescene", "woodfloor2", "fancycarpet2", "surrogate1", "surrogate2", "surrogate3", "female_ally_prisoner_front",
         "*cactus", "*garagedoor", "*metalboxtop1", "*metalboxbottom1", "RoadCornerLeft", "RoadCornerRight",
         "*truck00", "*truck10", "*truck20", "*truck01", "*truck11", "*truck21", "*truck02", "truck12", "*truck22", "*FireExtinguisher", "RoadCornerLeft2", "RoadCornerRight2",
@@ -94,7 +94,7 @@ public class Editor
                                 161, 178, 179, 180, 208,
                                 209, 210, 211, 212, 213,
                                 214, 215, 216, 217, 218,
-                                219, 220, 221, 192, 243,
+                                219, 220, 221,
                                 252, 253, 254, 255, 256, 257, 258, 259, 260, 270,
                                 186, 187, 299, 300, 308, 309,
                                 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 369, 370, 371, 372, 373, 374, 377,
@@ -110,7 +110,7 @@ public class Editor
         "BOOSTER_KIT", "SMG", "SHOTGUN", "GRENADE", "GASMASK", "NVG", "BODY_ARMOR", "PRIMARY_SILENCER", "LANDMINE",
         "LASER_HORIZONTAL", "LASER_VERTICAL", "MINE_DETECTOR", "C4"};
 
-        itemIndices = new int[] {70, 74, 74, 74, 74, 250, 71, 73, 72, 75, 76, 77, 201, 202, 96, 205, 206, 191, 204, 203, 207, 72, 293, 294, 295, 296, 368};
+        itemIndices = new int[] {70, 74, 74, 74, 74, 250, 71, 73, 72, 75, 76, 77, 201, 202, 96, 205, 206, 510, 204, 203, 207, 72, 293, 294, 295, 296, 510};
 
         objectives = new String[] {"Waypoint", "Laptop", "Push Button", "Documents", "Briefcase"};
         objectiveIndices = new int[] {251, 222, 223, 224, 225};

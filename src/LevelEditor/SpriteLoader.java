@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 509;
+    public static final int MAX_TILE_INDEX = 510;
 
     public SpriteLoader()
     {
@@ -849,7 +849,7 @@ public class SpriteLoader
         }
         else if (id == 192)
         {
-            return "Sprites/female_ally.gif";
+            return "Sprites/RadarObjective.gif";
         }
         else if (id == 193)
         {
@@ -1379,6 +1379,8 @@ public class SpriteLoader
         else if (id == 507){return "Sprites/boat04.png";}
         else if (id == 508){return "Sprites/boat14.png";}
         else if (id == 509){return "Sprites/boat24.png";}
+
+        else if (id == 510){return "Sprites/explosives.png";}
 
         return "Sprites/Tile0.gif";
 

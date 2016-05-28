@@ -818,13 +818,13 @@ public class LevelLoader
         if (iType.equals(ItemType.GRENADE.toString()))
         {
             type = ItemType.GRENADE;
-            id = 191;
+            id = 510;
             //isWeapon = true;
         }
         if (iType.equals(ItemType.C4.toString()))
         {
             type = ItemType.C4;
-            id = 368;
+            id = 510;
             //isWeapon = true;
         }
         if (iType.equals(ItemType.MEDKIT.toString()))
