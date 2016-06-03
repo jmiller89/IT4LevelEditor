@@ -68,7 +68,8 @@ public class Editor
         "*treetop", "*treebottom", "*darktreetop", "*darktreebottom",
         "*cliff_face", "*cliff_left", "*cliff_right", "*cliff_cornerleft", "*cliff_cornerright", "*cliff_cornerupperleft", "*cliff_cornerupperright",
         "*cliff_back", "*GrassWallBottom", "stairs_left_down", "stairs_right_up", "stairs_right_down", "stairs_left_up",
-        "*boat00", "boat10", "*boat20", "*boat01", "boat11", "*boat21", "*boat02", "*boat12", "*boat22", "*boat03", "*boat13", "*boat23", "*boat04", "*boat14", "*boat24"};
+        "*boat00", "boat10", "*boat20", "*boat01", "boat11", "*boat21", "*boat02", "*boat12", "*boat22", "*boat03", "*boat13", "*boat23", "*boat04", "*boat14", "*boat24",
+        "*roof", "*roof2", "*roof3", "*roof4", "*window", "*window_dark", "*window_light"};
 
         floorTiles = new String[] {"Tile0", "Water", "Sand", "IndoorFloorTile", "woodfloor",
         "Grass", "Snow", "fancyfloor2", "IndoorFloorTile3", "whitetiles", "Water2",
@@ -101,7 +102,8 @@ public class Editor
                                 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391,
                                 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404,
                                 445, 446, 447, 448,
-                                495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509};
+                                495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509,
+                                511, 512, 513, 514, 515, 516, 517};
 
         System.out.println("Num tiles: " + tileIndices.length);
 
