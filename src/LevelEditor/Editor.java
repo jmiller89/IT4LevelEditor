@@ -111,10 +111,11 @@ public class Editor
 
         items = new String[] {"MEDKIT", "SECONDARY_AMMO", "PRIMARY_AMMO", "SECONDARY_MAG", "PRIMARY_MAG",
         "TRANQ_PISTOL", "PISTOL", "ASSAULT_RIFLE", "SECONDARY_SILENCER", "CARDKEY_1", "CARDKEY_2", "CARDKEY_3", "CARDKEY_4", "CARDKEY_5",
+        "CARDKEY_6", "CARDKEY_7", "CARDKEY_8", "CARDKEY_9", "CARDKEY_10",
         "BOOSTER_KIT", "SMG", "SHOTGUN", "GRENADE", "GASMASK", "NVG", "BODY_ARMOR", "PRIMARY_SILENCER", "LANDMINE",
         "LASER_HORIZONTAL", "LASER_VERTICAL", "MINE_DETECTOR", "C4"};
 
-        itemIndices = new int[] {70, 74, 74, 74, 74, 250, 71, 73, 72, 75, 76, 77, 201, 202, 96, 205, 206, 510, 204, 203, 207, 72, 293, 294, 295, 296, 510};
+        itemIndices = new int[] {70, 74, 74, 74, 74, 250, 71, 73, 72, 75, 76, 77, 201, 202, 75, 76, 77, 201, 202, 96, 205, 206, 510, 204, 203, 207, 72, 293, 294, 295, 296, 510};
 
         objectives = new String[] {"Waypoint", "Laptop", "Push Button", "Documents", "Briefcase"};
         objectiveIndices = new int[] {251, 222, 223, 224, 225};
@@ -381,26 +382,30 @@ public class Editor
 
                 if (selectedPayload.dir == Direction.UP)
                 {
-                    id = 197;
+                    //id = 197;
                     dx = selectedPayload.delta;
                 }
                 else if (selectedPayload.dir == Direction.DOWN)
                 {
-                    id = 198;
+                    //id = 198;
                     dx = selectedPayload.delta;
                 }
                 else if (selectedPayload.dir == Direction.LEFT)
                 {
-                    id = 199;
+                    //id = 199;
                     dy = selectedPayload.delta;
                 }
                 else if (selectedPayload.dir == Direction.RIGHT)
                 {
-                    id = 200;
+                    //id = 200;
                     dy = selectedPayload.delta;
                 }
 
-                if (selectedPayload.cameraType == SecurityCameraType.GUN)
+                if (selectedPayload.cameraType == SecurityCameraType.NORMAL)
+                {
+                    id = 197;
+                }
+                else if (selectedPayload.cameraType == SecurityCameraType.GUN)
                 {
                     id = 483;
                 }
