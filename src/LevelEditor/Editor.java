@@ -71,14 +71,14 @@ public class Editor
         "*cliff_face", "*cliff_left", "*cliff_right", "*cliff_cornerleft", "*cliff_cornerright", "*cliff_cornerupperleft", "*cliff_cornerupperright",
         "*cliff_back", "*GrassWallBottom", "stairs_left_down", "stairs_right_up", "stairs_right_down", "stairs_left_up",
         "*boat00", "boat10", "*boat20", "*boat01", "boat11", "*boat21", "*boat02", "*boat12", "*boat22", "*boat03", "*boat13", "*boat23", "*boat04", "*boat14", "*boat24",
-        "*roof", "*roof2", "*roof3", "*roof4", "*window", "*window_dark", "*window_light"};
+        "*roof", "*roof2", "*roof3", "*roof4", "*window", "*window_dark", "*window_light", "lava"};
 
         floorTiles = new String[] {"Tile0", "Water", "Sand", "IndoorFloorTile", "woodfloor",
         "Grass", "Snow", "fancyfloor2", "IndoorFloorTile3", "whitetiles", "Water2",
         "Grass2", "Desert", "duct", "fancyfloor", "IndoorFloorTile5", "IndoorFloorTile6",
-        "fancycarpet", "HorizontalStairs", "VerticalStairs", "water3", "woodfloor2", "fancycarpet2"};
+        "fancycarpet", "HorizontalStairs", "VerticalStairs", "water3", "woodfloor2", "fancycarpet2", "lava"};
 
-        ftIndices = new int[] {0, 43, 44, 55, 56, 78, 79, 80, 81, 82, 83, 84, 97, 98, 118, 143, 144, 154, 220, 221, 254, 256, 257};
+        ftIndices = new int[] {0, 43, 44, 55, 56, 78, 79, 80, 81, 82, 83, 84, 97, 98, 118, 143, 144, 154, 220, 221, 254, 256, 257, 519};
 
         tileIndices = new int[]{0, 43, 44, 45, 46, 47, 48,
                                 49, 50, 51, 52, 53,
@@ -105,7 +105,7 @@ public class Editor
                                 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404,
                                 445, 446, 447, 448,
                                 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509,
-                                511, 512, 513, 514, 515, 516, 517};
+                                511, 512, 513, 514, 515, 516, 517, 519};
 
         System.out.println("Num tiles: " + tileIndices.length);
 
@@ -113,12 +113,12 @@ public class Editor
         "TRANQ_PISTOL", "PISTOL", "ASSAULT_RIFLE", "SECONDARY_SILENCER", "CARDKEY_1", "CARDKEY_2", "CARDKEY_3", "CARDKEY_4", "CARDKEY_5",
         "CARDKEY_6", "CARDKEY_7", "CARDKEY_8", "CARDKEY_9", "CARDKEY_10",
         "BOOSTER_KIT", "SMG", "SHOTGUN", "GRENADE", "GASMASK", "NVG", "BODY_ARMOR", "PRIMARY_SILENCER", "LANDMINE",
-        "LASER_HORIZONTAL", "LASER_VERTICAL", "MINE_DETECTOR", "C4"};
+        "LASER_HORIZONTAL", "LASER_VERTICAL", "MINE_DETECTOR", "C4", "C4GROUP"};
 
-        itemIndices = new int[] {70, 74, 74, 74, 74, 250, 71, 73, 72, 75, 76, 77, 201, 202, 75, 76, 77, 201, 202, 96, 205, 206, 510, 204, 203, 207, 72, 293, 294, 295, 296, 510};
+        itemIndices = new int[] {70, 74, 74, 74, 74, 250, 71, 73, 72, 75, 76, 77, 201, 202, 75, 76, 77, 201, 202, 96, 205, 206, 510, 204, 203, 207, 72, 293, 294, 295, 296, 510, 529};
 
-        objectives = new String[] {"Waypoint", "Laptop", "Push Button", "Documents", "Briefcase"};
-        objectiveIndices = new int[] {251, 222, 223, 224, 225};
+        objectives = new String[] {"Waypoint", "Laptop", "Push Button", "Documents", "Briefcase", "Explosives", "C4 Placement"};
+        objectiveIndices = new int[] {251, 222, 223, 224, 225, 518, 528};
 
         ef.addMapPanel();
         ef.addEditorPanel();
@@ -755,26 +755,26 @@ public class Editor
 
             if (selectedPayload.dir == Direction.UP)
             {
-                id = 197;
                 dx = selectedPayload.delta;
             }
             else if (selectedPayload.dir == Direction.DOWN)
             {
-                id = 198;
                 dx = selectedPayload.delta;
             }
             else if (selectedPayload.dir == Direction.LEFT)
             {
-                id = 199;
                 dy = selectedPayload.delta;
             }
             else if (selectedPayload.dir == Direction.RIGHT)
             {
-                id = 200;
                 dy = selectedPayload.delta;
             }
-            
-            if (selectedPayload.cameraType == SecurityCameraType.GUN)
+
+            if (selectedPayload.cameraType == SecurityCameraType.NORMAL)
+            {
+                id = 197;
+            }
+            else if (selectedPayload.cameraType == SecurityCameraType.GUN)
             {
                 id = 483;
             }

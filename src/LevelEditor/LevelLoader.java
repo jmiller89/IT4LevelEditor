@@ -854,6 +854,13 @@ public class LevelLoader
             id = 510;
             //isWeapon = true;
         }
+
+        if (iType.equals(ItemType.C4GROUP.toString()))
+        {
+            type = ItemType.C4GROUP;
+            id = 529;
+        }
+
         if (iType.equals(ItemType.MEDKIT.toString()))
         {
             type = ItemType.MEDKIT;

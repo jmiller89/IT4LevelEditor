@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 517;
+    public static final int MAX_TILE_INDEX = 529;
 
     public SpriteLoader()
     {
@@ -1390,6 +1390,21 @@ public class SpriteLoader
         else if (id == 515){return "Sprites/window.png";}
         else if (id == 516){return "Sprites/window_dark.png";}
         else if (id == 517){return "Sprites/window_light.png";}
+
+        else if (id == 518){return "Sprites/explosives2.png";}
+        else if (id == 519){return "Sprites/lava.png";}
+
+        else if (id == 520){return "Sprites/ghost_back.png";}
+        else if (id == 521){return "Sprites/ghost_front.png";}
+        else if (id == 522){return "Sprites/ghost_left.png";}
+        else if (id == 523){return "Sprites/ghost_right.png";}
+        else if (id == 524){return "Sprites/ghost_back_run.png";}
+        else if (id == 525){return "Sprites/ghost_front_run.png";}
+        else if (id == 526){return "Sprites/ghost_left_run.png";}
+        else if (id == 527){return "Sprites/ghost_right_run.png";}
+
+        else if (id == 528){return "Sprites/c4Objective.png";}
+        else if (id == 529){return "Sprites/c4group.png";}
 
         return "Sprites/Tile0.gif";
 

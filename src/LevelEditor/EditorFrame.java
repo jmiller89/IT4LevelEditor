@@ -111,7 +111,7 @@ public class EditorFrame extends javax.swing.JFrame
 
     private void showVersionInfo()
     {
-        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4: The Endling's Artifice Level Editor\nProgrammed by jmiller89\n\nSoftware version 1.6.38", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Intruder's Thunder 4: The Endling's Artifice Level Editor\nProgrammed by jmiller89\n\nSoftware version 1.6.40", "About IT4 Level Editor", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void newMap()

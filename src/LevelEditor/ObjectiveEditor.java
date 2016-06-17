@@ -181,6 +181,14 @@ public class ObjectiveEditor extends javax.swing.JPanel
             {
                 type.setSelectedIndex(4);
             }
+            else if (objective.getID() == 518)
+            {
+                type.setSelectedIndex(5);
+            }
+            else if (objective.getID() == 528)
+            {
+                type.setSelectedIndex(6);
+            }
             else
             {
                 type.setSelectedIndex(0);

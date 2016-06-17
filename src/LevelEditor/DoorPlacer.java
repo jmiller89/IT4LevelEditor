@@ -49,7 +49,7 @@ public class DoorPlacer extends javax.swing.JPanel
         this.add(l2);
         l2.setBounds(0, 50, 100, 50);
 
-        Integer[] seclvs = {0, 1, 2, 3, 4, 5, -1};
+        Integer[] seclvs = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1};
         secLev = new JComboBox(seclvs);
         this.add(secLev);
         secLev.setBounds(100, 50, 50, 50);
@@ -115,7 +115,7 @@ public class DoorPlacer extends javax.swing.JPanel
 
     private void secLev()
     {
-        if (secLev.getSelectedIndex() <= 5)
+        if (secLev.getSelectedIndex() <= 10)
         {
             editor.selectedPayload.secLev = secLev.getSelectedIndex();
         }
@@ -149,7 +149,7 @@ public class DoorPlacer extends javax.swing.JPanel
         {
             if (door.crawl)
             {
-                secLev.setSelectedIndex(6);
+                secLev.setSelectedIndex(11);
             }
             else
             {
