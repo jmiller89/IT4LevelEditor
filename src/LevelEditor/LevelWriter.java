@@ -80,6 +80,23 @@ public class LevelWriter
 
                 out.write("[/dialog]");
                 out.newLine();
+
+                if (o.explosions != null)
+                {
+                    if (o.explosions.size() > 0)
+                    {
+                        out.write("[explosions]");
+                        out.newLine();
+                        for(int j = 0; j < o.explosions.size(); j++)
+                        {
+                            out.write(o.explosions.get(j).x + " " + o.explosions.get(j).y);
+                            out.newLine();
+                        }
+                        out.write("[/explosions]");
+                        out.newLine();
+                    }
+                }
+
             }
             out.write("[/objectives]");
             out.newLine();

@@ -56,7 +56,10 @@ public class Level
             Objective copy = new Objective(obj);
             copy.setSprite(obj.getSprite());
 
-            objectives.get(obj.mapIndex).add(copy);
+            if (obj.mapIndex < objectives.size())
+            {
+                objectives.get(obj.mapIndex).add(copy);
+            }
         }
     }
 

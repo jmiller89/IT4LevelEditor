@@ -722,6 +722,7 @@ public class Editor
             //int id, int x, int y, int map_Index, String objName
             Objective newObjective = new Objective(objectiveIndices[selectedPayload.id], x, y, currRoom.id, selectedPayload.name);
             newObjective.dialog = makeDialog(selectedPayload.dialog);
+            newObjective.explosions = o.explosions;
 
             currLevel.addObjective(newObjective);
             currLevel.initializeObjectives();

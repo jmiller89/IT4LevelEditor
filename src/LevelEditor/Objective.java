@@ -4,6 +4,9 @@
 
 package LevelEditor;
 
+import java.awt.Point;
+import java.util.ArrayList;
+
 /**
  *
  * @author Jim
@@ -15,6 +18,7 @@ public class Objective extends ITObject
     public int mapIndex;
     private String title = "OBJECTIVE";
     public boolean remove = false;
+    public ArrayList<Point> explosions = null;
 
     public Objective(int id, int x, int y, int map_Index, String objName)
     {
@@ -37,6 +41,15 @@ public class Objective extends ITObject
         mapIndex = o.mapIndex;
         dialog = new Dialog(o.dialog);
         title = o.title;
+
+        if (o.explosions != null)
+        {
+            explosions = new ArrayList<Point>(o.explosions.size());
+            for (int i = 0; i < o.explosions.size(); i++)
+            {
+                explosions.add(new Point(o.explosions.get(i)));
+            }
+        }
     }
 
     @Override
