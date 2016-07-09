@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 529;
+    public static final int MAX_TILE_INDEX = 550;
 
     public SpriteLoader()
     {
@@ -1405,6 +1405,30 @@ public class SpriteLoader
 
         else if (id == 528){return "Sprites/c4Objective.png";}
         else if (id == 529){return "Sprites/c4group.png";}
+
+        else if (id == 530){return "Sprites/hitler_back.gif";}
+        else if (id == 531){return "Sprites/hitler_front.gif";}
+        else if (id == 532){return "Sprites/hitler_left.gif";}
+        else if (id == 533){return "Sprites/hitler_right.gif";}
+        else if (id == 534){return "Sprites/hitler_back_run.gif";}
+        else if (id == 535){return "Sprites/hitler_front_run.gif";}
+        else if (id == 536){return "Sprites/hitler_left_run.gif";}
+        else if (id == 537){return "Sprites/hitler_right_run.gif";}
+
+        else if (id == 538){return "Sprites/MutantBossBack.gif";}
+        else if (id == 539){return "Sprites/MutantBossFront.gif";}
+        else if (id == 540){return "Sprites/MutantBossLeft.gif";}
+        else if (id == 541){return "Sprites/MutantBossRight.gif";}
+        else if (id == 542){return "Sprites/MutantBossBackRun.gif";}
+        else if (id == 543){return "Sprites/MutantBossFrontRun.gif";}
+        else if (id == 544){return "Sprites/MutantBossLeftRun.gif";}
+        else if (id == 545){return "Sprites/MutantBossRightRun.gif";}
+
+        else if (id == 546){return "Sprites/patient_female.png";}
+        else if (id == 547){return "Sprites/patient_female2.png";}
+        else if (id == 548){return "Sprites/patient_male.png";}
+        else if (id == 549){return "Sprites/patient_male2.png";}
+        else if (id == 550){return "Sprites/patient_male_hitler.png";}
 
         return "Sprites/Tile0.gif";
 
