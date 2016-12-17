@@ -21,7 +21,7 @@ public class SpriteLoader
     private Sprite[] sprites;
 
     //Update this every time a sprite is added
-    public static final int MAX_TILE_INDEX = 550;
+    public static final int MAX_TILE_INDEX = 559;
 
     public SpriteLoader()
     {
@@ -1429,6 +1429,17 @@ public class SpriteLoader
         else if (id == 548){return "Sprites/patient_male.png";}
         else if (id == 549){return "Sprites/patient_male2.png";}
         else if (id == 550){return "Sprites/patient_male_hitler.png";}
+
+        else if (id == 551){return "Sprites/dockedge.png";}
+        else if (id == 552){return "Sprites/ak104u.png";}
+        else if (id == 553){return "Sprites/g18.png";}
+        else if (id == 554){return "Sprites/m3a1sd.png";}
+        else if (id == 555){return "Sprites/mp7sd.png";}
+        else if (id == 556){return "Sprites/m1911a1custom.png";}
+
+        else if (id == 557){return "Sprites/dockedge_left.png";}
+        else if (id == 558){return "Sprites/dockedge_right.png";}
+        else if (id == 559){return "Sprites/dockstairs.png";}
 
         return "Sprites/Tile0.gif";
 

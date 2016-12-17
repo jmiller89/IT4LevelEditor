@@ -58,7 +58,7 @@ public class ItemPlacer extends javax.swing.JPanel
         this.add(label2);
         label2.setBounds(220, 0, 50, 50);
 
-        Integer[] ranks = {1,2,3};
+        Integer[] ranks = {1,2,3,4,5};
         rank = new JComboBox(ranks);
         this.add(rank);
         rank.setBounds(220, 40, 80, 50);
